@@ -1,0 +1,2249 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1">
+
+		<!-- Meta -->
+		<meta name="description" content="Manage Your Reporting Hours In one Place.">
+		<meta name="author" content="Uday Bhan">
+		<link rel="shortcut icon" href="https://localhost/masonry/assets/localhost/img/header-logo_1684236971.png" />
+		<!--<link rel="apple-touch-icon" href="https://localhost/masonry/assets/localhost/img/header-logo_1684236971.png"/>-->
+		<link rel="apple-touch-icon" href="https://placehold.jp/150x150.png?text=%20&css=%7B%22background%22%3A%22%20url(%27https://localhost/masonry/assets/localhost/img/header-logo_1684236971.png%27)%20center%20center%20%23ffffff%20no-repeat%22%2C%22background-size%22%3A%22%20120px%22%7D"/>
+
+		<!-- Title -->
+		<title>Masonry Group Inc - Manage Your Reporting Hours In one Place.</title>
+
+		<!-- ************* Common Css Files ************ -->
+		<style>
+			:root {
+				--brand-color: #791116;
+			}
+		</style>
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://localhost/masonry/css/bootstrap.min.css" />
+		<!-- Icomoon Font Icons css -->
+		<link rel="stylesheet" href="https://localhost/masonry/fonts/style.css" />
+		<!-- Jquery Confirm CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css" />
+		<!-- DateRange css -->
+		<link rel="stylesheet" href="https://localhost/masonry/vendor/daterange/daterange.css" />
+		<!-- Datepicker css -->
+		<link rel="stylesheet" href="https://localhost/masonry/vendor/datepicker/css/classic.css" />
+		<link rel="stylesheet" href="https://localhost/masonry/vendor/datepicker/css/classic.date.css" />	
+		<link rel="stylesheet" href="https://localhost/masonry/vendor/datepicker/css/classic.time.css" />	
+		<!-- Lobipanel css -->
+		<link rel="stylesheet" href="https://localhost/masonry/vendor/lobipanel/css/lobipanel.css" />
+		<!-- BS Selectpicker CSS -->
+		<link rel="stylesheet" href="https://localhost/masonry/vendor/bs-select/bs-select.css" />
+		<!-- Notify -->
+		<link rel="stylesheet" href="https://localhost/masonry/vendor/notify/notify-flat.css">
+		<!-- Rangeslider CSS -->
+		<link rel="stylesheet" href="https://localhost/masonry/vendor/range-slider/ion.rangeSlider.css">
+		<!-- Summernote CSS -->
+		<link rel="stylesheet" href="https://localhost/masonry/vendor/summernote/summernote-bs4.css" />
+		<!-- Main CSS -->
+		<link rel="stylesheet" href="https://localhost/masonry/css/main.css" />
+		
+		<link rel="stylesheet" href="https://localhost/masonry/css/custom.css" />
+		</head>
+<style>
+		.table th{border-bottom:0;}
+		.report-footer .border-bx {
+			font-size: 13px;
+		}
+		.border-bx {
+			border: 1px dashed #6c757d;
+			padding: 7px 6px;
+			border-radius: 0.35rem;
+		}
+		.dropdown-menu .dropdown-item:hover{ 
+			background: #eff1f5;
+		}
+		.report-footer{
+			margin-top: 15px;
+		}
+		.report-details{
+			z-index: 2;
+		}
+		.report-details .dropdown-item {
+			border-bottom: 1px solid #00000014;
+			padding: 10px 12px;
+		}
+
+		.report-details .dropdown-item:first-child {
+			border-top: 1px solid #00000014;
+		}
+		.report-details .report-footer:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: -1;
+			border-bottom-left-radius: 4px;
+			border-bottom-right-radius: 4px;
+			height: 85px;
+			background: #00000021;
+		}
+
+		.report-approval .custom-table > tbody tr:hover {
+    		background: #fff; 
+		}
+
+		.report-approval .custom-table > tbody tr:nth-of-type(even) {
+    		background-color: #fff; 
+		}
+		.report-approval .custom-table thead {
+    		background: #eef0f5; 
+		}
+		.report-approval .custom-table > thead tr:hover:first-child  {
+    		background: #eef0f5; 
+		}
+		
+		@media (min-width: 992px){
+			.modal-xl {
+				max-width: 1200px !important;
+			}
+		}
+		
+		.final-data > thead > tr > th{
+			width:120px;
+		}
+		
+        .hours-detail th, .hours-detail td {
+            min-height: 35px;
+            max-height: 35px;
+            height: 35px;
+        }
+		
+		.hours-detail>table>tbody>tr>td{
+			vertical-align: top;
+		}
+      
+        .hours-detail thead, .hours-detail tfoot tr:first-child {
+			background-color:#e3e3e3;
+        }
+		
+		.hours-detail>table table {
+			width: -webkit-fill-available;
+		}
+      
+        .hours-detail thead th,
+		.hours-detail tbody th,
+		.hours-detail tfoot th {
+			border: 1px solid #9E9E9E;
+			vertical-align: middle;
+			text-align: center;
+			font-weight: 600 !important;
+        }
+		
+        .hours-detail thead th{
+			text-overflow: ellipsis;
+            overflow: hidden;
+		}
+		
+        .hours-detail thead td,
+        .hours-detail tbody td,
+        .hours-detail tfoot td{
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            text-align: center;
+            border: 1px solid #9E9E9E;
+			background: #fff;
+            
+        }
+        .hours-detail strong{
+            font-weight: 600 !important;
+        }
+        .hours-detail table .bdr-left {
+            border-left: 2px solid #000 !important;
+			
+        }
+        .hours-detail table .bdr-right {
+            border-right: 2px solid #000 !important;
+			
+        }
+        .hours-detail table .bdr-top {
+            border-top: 2px solid #000 !important;
+			
+        }
+        .hours-detail table .bdr-bottom {
+            border-bottom: 2px solid #000 !important;
+			
+        }
+        .hours-detail table .bdr {
+            border: 2px solid #000 !important;
+			
+        }
+		
+		.hours-detail .custom-control {
+			min-height: 0 !important;
+		}
+		.hours-detail .bonus{
+			padding: 0.2rem 0.3rem 0.1rem 0.3rem !important;
+		}
+		.hours-detail .table-sm td,.hours-detail .table-sm th  {
+			padding: 0.3rem 0.3rem;
+			line-height: 1.33;
+			min-width: 35px;
+		}
+		.hours-detail .cell-invisible{
+			position: relative;
+		}
+		.hours-detail .cell-invisible:after {
+			right: 0;
+			content: '';
+			width: 100%;
+			height: 100%;
+			left: 0;
+			background: #e3e3e3;
+			display: block;
+			top: 0;
+			position: absolute;
+		}
+		.hours-detail .checkbox {
+			vertical-align: middle;
+			margin-right: 5px;
+			width: 12px;
+			height: 12px;
+		}
+		.hours-detail label{
+			margin-bottom: 0;
+		}
+        .btn-group>.btn {
+            border: 1px solid #9E9E9E;
+        }
+        .no-wrap{
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .total-col{
+            white-space: break-spaces;
+        }
+		.fixed{
+			position: sticky;
+			z-index: 1;
+			left: 0;
+		}
+		.under-review{
+			box-shadow: 1px 1px 5px -1px #ffc107 !important;
+    		background: #ffefbf !important;
+		}
+		.user-detail:hover {
+			text-decoration: underline;
+			color: #74181a;
+		}
+</style>
+    <body>
+        <!-- Loading starts -->
+<!--<div id="loading-wrapper">
+    <div class="spinner-border" role="status"> <span class="sr-only">Loading...</span> </div>
+</div>-->
+<div class="preloader">
+	<img src="https://localhost/masonry/assets/localhost/img/header-logo_1684235586.png" alt="Masonry Group Inc"/>
+</div>
+<style type="text/css">
+	/**** Preloader CSS ****/
+	.preloader {
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: var(--brand-color);
+		z-index: 9800;
+		transition: all 1s ease;
+		transform: rotate(0deg) scale(1);
+	}
+	.preloader img {
+		position: absolute;
+		filter: contrast(0) brightness(100);
+		width: auto;
+		height: 100px;
+		animation-name: rotator;
+		animation-duration: 2s;
+		animation-iteration-count: infinite;
+	}
+	@keyframes rotator {
+		0%, 100% {
+			transform: scale(1);
+		}
+		50% {
+			transform: scale(1.5);
+		}
+	}
+</style>
+<!-- Page wrapper start -->
+<div class="page-wrapper">
+		<!-- Sidebar wrapper start -->
+	<nav id="sidebar" class="sidebar-wrapper">
+		
+		<!-- Sidebar brand start  -->
+		<div class="sidebar-brand">
+			<a href="index.html" class="logo">
+				<img src="https://localhost/masonry/assets/localhost/img/header-logo_1684236971.png" class="pinned-logo" alt="Masonry Group Inc" />
+				<img src="https://localhost/masonry/assets/localhost/img/header-logo_1684235586.png" class="normal-logo" alt="Masonry Group Inc" />
+			</a>
+		</div>
+		<!-- Sidebar brand end  -->
+
+		<!-- Sidebar content start -->
+		<div class="sidebar-content">
+
+			<!-- sidebar menu start -->
+			<div class="sidebar-menu">
+				<ul>
+										<li class="header-menu">General</li>
+					
+										<li class="">
+						<a href="index.html" class=""> <i class="icon-layout"></i> <span class="menu-text">Dashboard</span></a>
+					</li>
+					<li class="header-menu">Clients</li>
+					<li class="sidebar-dropdown ">
+	                    <a href="javascript:void(0);" class=""><i class="icon-portrait"></i><span class="menu-text">Clients</span></a>
+	                    <div class="sidebar-submenu">
+	                        <ul>
+								<li class="">
+									<a href="filemanager.html" class="">Clients</a>
+								</li>
+								<!-- <li class="">
+									<a href="clients.html" class="">Clients</a>
+								</li> -->
+								<li class="">
+									<a href="contacts.html" class="">Contacts</a>
+								</li>
+								<!-- <li class="">
+									<a href="projects2.html" class="">Projects Old</a>
+								</li> -->
+								<li class="">
+									<a href="projects.html" class="">Projects </a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<!--<li class="">
+						<a href="clients.html" class=""> <i class="icon-portrait"></i> <span class="menu-text">Clients</span></a>
+					</li>
+					<li class="">
+						<a href="contacts.html" class=""> <i class="icon-recent_actors"></i> <span class="menu-text">Contacts</span></a>
+					</li>
+					<li class="">
+						<a href="projects.html" class=""> <i class="icon-book-open"></i> <span class="menu-text">Projects</span></a>
+					</li>-->
+					<li class="header-menu">Work</li>
+					<li class="">
+						<a href="jobs.html" class=""><i class="icon-inbox"></i><span class="menu-text">Jobs / Lots</span></a>
+					</li>
+					<li class="">
+						<a href="tasks.html" class=""><i class="icon-clipboard"></i><span class="menu-text">Tasks</span></a>
+					</li>
+					<li class="">
+						<a href="items.html" class=""><i class="icon-layers2"></i><span class="menu-text">Items</span></a>
+					</li>
+					<li class="">
+						<a href="work-type.html" class=""><i class="icon-layout"></i><span class="menu-text">Work Type</span></a>
+					</li>
+					<!--<li class="">
+						<a href="jobs.html?type=Vehicle" class=""><i class="icon-airport_shuttle"></i><span class="menu-text">Vehicle Jobs</span></a>
+					</li>-->
+<!--
+	                <li class="sidebar-dropdown ">
+	                    <a href="javascript:void(0);" class=""><i class="icon-inbox"></i><span class="menu-text">Jobs / Tasks</span></a>
+	                    <div class="sidebar-submenu">
+	                        <ul>
+								<li class="">
+									<a href="jobs.html" class="">Jobs / Tasks</a>
+								</li>
+								<li class="">
+									<a href="items.html" class="">Items</a>
+								</li>
+								<li class="">
+									<a href="work-type.html" class="">Work Type</a>
+								</li>
+								<li class="">
+									<a href="jobs.html?type=Vehicle" class="">Vehicle Jobs</a>
+								</li>
+	                        </ul>
+	                    </div>
+	                </li>-->
+										<li class="header-menu">Reports</li>
+										<!--<li class="active active-page-link">
+						<a href="reports.html" class="current-page"><i class="icon-file-text"></i> <span class="menu-text">All Reports</span></a>
+					</li>-->
+										<!--<li class="">
+						<a href="reports.html?type=Pending" class=""><i class="icon-file"></i> <span class="menu-text">Pending Reports</span></a>
+					</li>
+					<li class="">
+						<a href="reports.html?type=Approved" class=""><i class="icon-file-plus"></i> <span class="menu-text">Approved Reports</span></a>
+					</li>
+					<li class="">
+						<a href="reports.html?type=Declined" class=""><i class="icon-file-minus"></i> <span class="menu-text">Declined Reports</span></a>
+					</li>-->
+	                <li class="sidebar-dropdown active">
+	                    <a href="javascript:void(0);" class="current-page"><i class="icon-file-text"></i><span class="menu-text">Reports</span></a>
+	                    <div class="sidebar-submenu">
+	                        <ul>
+									                            <li class="active active-page-link">
+	                                <a href="reports.html" class="current-page">Reports</a>
+	                            </li>
+								<li class="">
+	                                <a href="task-report.html" class="">Employee Reports</a>
+	                            </li>
+																
+	                            <li class="">
+	                                <a href="reports.html?type=Pending" class="">Pending Reports</a>
+	                            </li>
+	                            <li class="">
+	                                <a href="reports.html?type=Approved" class="">Approved Reports</a>
+	                            </li>
+	                            <li class="">
+	                                <a href="reports.html?type=Declined" class="">Declined Reports</a>
+	                            </li>
+																<li class="">
+									<a href="payout-report.html" class="">Payout Reports</a>
+								</li>
+								<li class="">
+									<a href="payout-report2.html" class="">Payout Report Old</a>
+								</li>
+									                        </ul>
+	                    </div>
+	                </li>
+										<li class="header-menu">Company</li>
+					<li class="">
+						<a href="employees.html" class=""> <i class="icon-users"></i> <span class="menu-text">Employees</span></a>
+					</li>
+					
+					
+					<li class="sidebar-dropdown ">
+						<a href="javascript:void(0);" class=""><i class="icon-user1"></i><span class="menu-text">Users</span></a>
+						<div class="sidebar-submenu">
+							<ul>
+								<li class="">
+									<a href="users.html" class="">Users</a>
+								</li>
+								<li class="">
+									<a href="users.html?type=pending" class="">Pending Users</a>
+								</li>
+								<!--<li class="">
+									<a href="users.html?type=archived" class="">Archived Users</a>
+								</li>-->
+								<li class="">
+									<a href="manage-breaks.html" class="">User Payout Breaks</a>
+								</li>
+								
+								<!--<li class="">
+									<a href="users.html" class="">Users</a>
+								</li>
+								<li class="">
+									<a href="users.html?type=pending" class="">Pending Users</a>
+								</li>
+								<li class="">
+									<a href="users.html?type=archived" class="">Archived Users</a>
+								</li>-->
+							</ul>
+						</div>
+					</li>
+					
+					<!--<li class="">
+						<a href="users.html" class=""> <i class="icon-user-check"></i> <span class="menu-text">Users</span></a>
+					</li>
+					<li class="">
+						<a href="users.html?type=pending" class=""> <i class="icon-user-plus"></i> <span class="menu-text">Pending Users</span></a>
+					</li>
+					<li class="">
+						<a href="users.html?type=archived" class=""> <i class="icon-user-x"></i> <span class="menu-text">Archived Users</span></a>
+					</li>-->
+					<li class="">
+						<a href="crew.html" class=""> <i class="icon-users"></i> <span class="menu-text">Crew </span></a>
+					</li>
+					<li class="">
+						<a href="crew2.html" class=""> <i class="icon-users"></i> <span class="menu-text">Crew Old</span></a>
+					</li>
+					
+					<!--<li class="">
+						<a href="manage-breaks.html" class=""> <i class="icon-gift"></i> <span class="menu-text">User Payout Breaks</span></a>
+					</li>-->
+					<li class="">
+						<a href="roles.html" class=""> <i class="icon-award"></i> <span class="menu-text">Roles & Permissions</span></a>
+					</li>
+					<!--<li class="">
+						<a href="vehicles.html" class=""> <i class="icon-truck"></i> <span class="menu-text">Vehicles</span></a>
+					</li>
+					<li class="">
+						<a href="work-address.html" class=""> <i class="icon-map-pin"></i> <span class="menu-text">Work Address</span></a>
+					</li>
+					<li class="header-menu">Reports</li>
+					<li class="">
+						<a href="payout-report.html" class=""> <i class="icon-user1"></i> <span class="menu-text">Payout Report</span></a>
+					</li>
+					<li class="">
+						<a href="users-report.html" class=""> <i class="icon-user1"></i> <span class="menu-text">User's Report</span></a>
+					</li>
+					<li class="">
+						<a href="jobs-report.html" class=""> <i class="icon-user1"></i> <span class="menu-text">Job's Report</span></a>
+					</li>
+-->
+					<li class="header-menu">Settings</li>
+					<li class="sidebar-dropdown ">
+						<a href="javascript:void(0);" class=""><i class="icon-settings1"></i><span class="menu-text">Settings</span></a>
+						<div class="sidebar-submenu">
+							<ul>
+								<li class="">
+									<a href="general-settings.html" class="">General Settings</a>
+								</li>
+								<li class="">
+									<a href="task-settings.html" class="">Task Settings</a>
+								</li>
+								<li class="">
+									<a href="payout-settings.html" class="">Payout Settings</a>
+								</li>
+								<li class="">
+									<a href="custom-fields.html" class="">Custom Fields</a>
+								</li>
+								<li class="">
+									<a href="report-settings.html" class="">Report Settings</a>
+								</li>
+								<li class="">
+									<a href="break-settings.html" class="">Break Settings</a>
+								</li>
+								<li class="">
+									<a href="category-settings.html" class="">Category Settings</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+										<li class="header-menu">Extra</li>
+<!--
+					<li class="">
+						<a href="documents.html" class=""> <i class="icon-documents"></i> <span class="menu-text">File Manager</span></a>
+					</li>
+					<li class="">
+						<a href="support.html" class=""> <i class="icon-headset"></i> <span class="menu-text">Support</span></a>
+					</li>
+-->
+										<li class="sidebar-dropdown ">
+						<a href="javascript:void(0);"><i class="icon-archive1"></i><span class="menu-text">Archived</span></a>
+						<div class="sidebar-submenu">
+							<ul>
+								<li class="">
+									<a href="archived-users.html" class="">Archived Users</a>
+								</li>
+								<li class="">
+									<a href="archived-employees.html" class="">Archived Employees</a>
+								</li>
+								<li class="">
+									<a href="archived-reports.html" class="">Archived Reports</a>
+								</li>
+								<li class="">
+									<a href="archived-jobs.html" class="">Archived Jobs</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+										<li>
+						<a href="https://localhost/masonry/logout.html"> <i class="icon-log-out text-danger"></i> <span class="menu-text text-danger">Logout</span></a>
+					</li>
+									</ul>
+			</div>
+			<!-- sidebar menu end -->
+
+		</div>
+		<!-- Sidebar content end -->
+		
+	</nav>
+	<!-- Sidebar wrapper end -->
+	
+	<!-- Modal -->
+	<div class="modal fade" id="addCompany" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Add Company</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="form-group">
+						<input type="hidden" id="join_company_user_mobile" value="9931063845"/>
+						<label for="join_company_id">Select Company</label>
+						<select class="form-control selectpicker" id="join_company_id" data-live-search="true" title="Select Company">
+							select * from `company` where `id` NOT IN (1);						</select>
+					</div>
+				</div>
+				<div class="modal-footer custom">
+					<div class="left-side">
+						<button type="button" class="btn btn-link danger btn-block" data-dismiss="modal">Cancel</button>
+					</div>
+					<div class="divider"></div>
+					<div class="right-side">
+						<a id="join_company" href="javascript:void(0);" class="btn btn-link success btn-block">Add Company</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+        <!-- Page content start  -->
+        <div class="page-content">
+            
+            <!-- Header start -->
+<header class="header">
+	<div class="toggle-btns">
+		<a id="toggle-sidebar" href="#">
+			<i class="icon-list"></i>
+		</a>
+		<a id="pin-sidebar" href="#">
+			<i class="icon-list"></i>
+		</a>
+	</div>
+	<div class="header-items">
+		<!-- Header actions start -->
+		<ul class="header-actions">
+						<li class="mr-2">
+				<a href="javascript:void(0);"><i class="icon-bell"></i></a>
+			</li>
+			<li class="dropdown">
+				<a href="#" id="userSettings" class="user-settings" data-toggle="dropdown" aria-haspopup="true">
+					<!--<span class="user-name">Irphan Ahmad</span>-->
+					<span class="avatar">
+						<img src="https://localhost/masonry/assets/localhost/img/IMG20230125093748_1709488808_1710753992.jpg" alt="Irphan Ahmad">
+					</span>
+				</a>
+				<div class="dropdown-menu dropdown-menu-right" aria-labelledby="userSettings">
+					<div class="header-profile-actions">
+						<div class="header-user-profile">
+							<!--<div class="header-user">
+								<img src="https://localhost/masonry/IMG20230125093748_1709488808_1710753992.jpg" alt="Irphan Ahmad">
+							</div>-->
+							<h5>Irphan Ahmad</h5>
+							<p>Admin</p>
+						</div>
+													<a href="https://localhost/masonry/dashboard.html"><i class="icon-refresh-cw"></i> User Dashboard</a>
+												<a href="profile.html"><i class="icon-user1"></i> My Profile</a>
+						<a href="https://localhost/masonry/logout.html"><i class="icon-log-out1"></i> Sign Out</a>
+					</div>
+				</div>
+			</li>
+		</ul>						
+		<!-- Header actions end -->
+	</div>
+</header>
+<!-- Header end -->
+
+<div id="notes" class="notify notify-notes"></div>
+
+
+            <!-- Page header start -->
+            <div class="page-header">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                    <li class="breadcrumb-item active">All Reports</li>
+                </ol>
+
+                <ul class="app-actions">
+                    <li class="mr-4">
+                        <a href="javascript:void(0);" id="filter_box_btn">
+                            <i class="icon-filter"></i>
+                            <i class="icon-x-circle"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <span class="btn btn-primary" id="export_to_excel">
+							<i class="icon-external-link"></i> Export to Excel
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <!-- Page header end -->
+
+            <!-- Main container start -->
+            <div class="main-container">
+                <!-- Filter start -->
+                <div class="filter_box">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+							<p>Report Type</p>
+                            <div class="form-group">
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" value="All" name="filter_report_type" id="all" checked class="custom-control-input">
+                                    <label class="custom-control-label" for="all">All</label>
+                                </div>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" value="Pending" name="filter_report_type" id="pending"  class="custom-control-input">
+                                    <label class="custom-control-label" for="pending">Pending</label>
+                                </div>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" value="Approved" name="filter_report_type" id="approved"  class="custom-control-input">
+                                    <label class="custom-control-label" for="approved">Approved</label>
+                                </div>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" value="Declined" name="filter_report_type" id="declined"  class="custom-control-input">
+                                    <label class="custom-control-label" for="declined">Declined</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+							<div class="form-group">
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" id="select_date_range" class="custom-control-input" checked>
+									<label class="custom-control-label" for="select_date_range">Date Range</label>
+								</div>
+								<input type="text" class="form-control daterange" id="filter_date_range" data-startdate="05/14/2024" data-enddate="06/13/2024" data-maxdate="06/13/2024" data-ranges="true" readonly />
+							</div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+							<div class="form-group">
+								<label for="filter_crew_name">Crew List</label>
+								<select class="form-control selectpicker" id="filter_crew_name" data-live-search="true" title="Select Crew">
+									<option value="All" selected>All Crew</option>
+																	</select>
+							</div>
+                        </div>
+					</div>
+					<div class="row">
+						<div class="col-6 ">
+															<button type="button" class="btn btn-primary mb-1" id="select_all" onclick="SelectAll()">Select All Pending</button>
+								<button type="button" class="btn btn-warning mb-1" id="deselect_all" onclick="DeSelectAll()">DeSelect All</button>
+								<button type="button" class="btn btn-success mb-1" id="approve_all" onclick="ApproveAll()">Approve Selected</button>
+							                        </div>
+                        <div class="col-6 text-right">
+                            <a href="reports.html" class="btn btn-secondary mb-1">Reset Filter</a>
+                            <button type="button" class="btn btn-primary mb-1" id="apply_filter">Apply Filter</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Filter end -->
+                            </div>
+
+            <div class="modal fade" id="vCenterModal" tabindex="-1" role="dialog" aria-labelledby="vCenterModalTitle" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="vCenterModalTitle">Approve</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body approve_data">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" onClick="approveReport()">Approve</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Main container end -->
+
+			<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+				<div class="modal-dialog modal-lg" role="edit_user">
+					<div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Edit <span class="emp_name"> Report</span></h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+							<div class="row">
+								<div class="col-6 form-group">
+									<label for="firstname">First Name <span class="text-danger">*</span></label>
+									<input type="hidden" id="user_id" value="">
+									<input type="text" class="form-control" id="firstname" placeholder="Enter First Name" value="">
+								</div>
+								<div class="col-6 form-group">
+									<label for="lastname">Last Name <span class="text-danger">*</span></label>
+									<input type="text" class="form-control" id="lastname" placeholder="Enter Last Name" value="">
+								</div>
+                            </div>
+							<div class="row">
+								<div class="col-6 form-group">
+									<label for="cellnumber">Cellnumber <span class="text-danger">*</span></label>
+									<input type="text" class="form-control" id="cellnumber" placeholder="Enter 10 digit Cellnumber" value="" maxlength="10" autocomplete="off">
+								</div>
+								<div class="col-6 form-group">
+									<label for="email">Email <span class="text-danger">*</span></label>
+									<div class="input-group">
+										<input type="text" class="form-control" id="email" placeholder="Enter Email" value="">
+										<div class="input-group-append">
+											<span class="btn btn-primary" id="assign_email">Generate</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-6 form-group">
+									<label for="address">Address</label>
+									<input type="text" class="form-control" id="address" placeholder="Enter Address" value="">
+								</div>
+								<div class="col-6 form-group">
+									<label for="city">City</label>
+									<input type="text" class="form-control" id="city" placeholder="Enter City" value="">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-6 form-group">
+									<label for="state">State / Province</label>
+									<input type="text" class="form-control" id="state" placeholder="Enter State / Province" value="">
+								</div>
+								<div class="col-6 form-group">
+									<label for="zipcode">PIN / ZIP Code</label>
+									<input type="text" class="form-control" id="zipcode" placeholder="Enter PIN / ZIP Code" value="">
+								</div>
+							</div>
+                            <div class="row">
+								<div class="col-6 form-group">
+									<label for="payout">Payout ( Hourly ) <span class="text-danger">*</span></label>
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<span class="input-group-text">CAD</span>
+										</div>
+										<input type="text" class="form-control" id="payout" placeholder="Enter Payout ( Hourly )" value="0">
+									</div>
+								</div>
+								<div class="col-6 mt-4">
+									<div class="form-control">
+										<div class="custom-control custom-switch">
+											<input type="checkbox" class="custom-control-input" id="login_status">
+											<label class="custom-control-label" for="login_status">Login Status</label>
+										</div>
+									</div>
+								</div>
+                            </div>
+							<div class="row">
+								<div class="col-6 form-group">
+									<label for="designation_type">Role Type</label>
+									<select class="form-control" id="designation_type" placeholder="Choose Role Type">
+										<option value="user">User</option>
+										<option value="company">Company</option>
+									</select>
+								</div>
+								<div class="col-6 form-group">
+									<label for="role">Role <span class="text-danger">*</span></label>
+									<select class="form-control selectpicker" id="role" data-live-search="true" title="Select Role" >
+																								<option value="1">Admin</option>
+																									<option value="2">Bricklayer</option>
+																									<option value="3">Foreman</option>
+																									<option value="4">Labour</option>
+																									<option value="5">Forklift Operator</option>
+																									<option value="6">Bricklayer Apprentice</option>
+																									<option value="7">Forklift Apprentice</option>
+																									<option value="9">Supervisor</option>
+																				</select>
+								</div>
+							</div>
+							<input type="hidden" class="form-control" id="job_supervisor" value="">
+							<input type="hidden" class="form-control" id="job_catch_all" value="">
+								
+							<div class="row clearfix">
+								<div class="col-12 col-md-6">
+									<div class="form-control">
+										<div class="custom-control custom-switch">
+											<input type="checkbox" class="custom-control-input" checked="" id="worker">
+											<label class="custom-control-label" for="worker">Search Status</label>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-md-6">
+									<div class="form-control">
+										<div class="custom-control custom-switch">
+											<input type="checkbox" class="custom-control-input" id="r_status">
+											<label class="custom-control-label" for="r_status">Reporting Status</label>
+										</div>
+									</div>
+								</div>
+							</div>
+                        </div>
+                        <div class="modal-footer custom">
+                            <div class="left-side">
+                                <button type="button" class="btn btn-link danger btn-block" data-dismiss="modal">Cancel</button>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="right-side">
+                                <a id="update_user" href="javascript:void(0);" class="btn btn-link success btn-block" data-mail="false">Update</a>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+			</div>
+
+			<!-- DEcline reason modal -->
+			<div class="modal fade" id="declineModal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+				<div class="modal-dialog" role="edit_user">
+					<div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Decline Reason <span class="report_name"></span></h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+							<div class="form-group">
+								<label for="decline_reason">Reason</label>
+								<input type="hidden" id="decline_report_id" value="">
+								<textarea class="form-control" id="decline_reason"></textarea>
+							</div>
+                        </div>
+                        <div class="modal-footer custom">
+                            <div class="left-side">
+                                <button type="button" class="btn btn-link danger btn-block" data-dismiss="modal">Cancel</button>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="right-side">
+                                <a href="javascript:void(0);" class="btn btn-link success btn-block" data-mail="false" onClick="addReason()">Add</a>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+			</div>
+        </div>
+        <!-- Page content end -->
+
+    </div>
+    <!-- Page wrapper end -->
+	<style>
+		.break-table tr td, .break-table tr th {
+			border: 1px dashed #ccc;
+		}
+		.break-table tr:first-child td, .break-table tr:first-child th {
+			border-top: 0.1rem solid transparent;
+		}
+		.break-table tr:last-child td, .break-table tr:last-child th {
+			border-bottom: 0.1rem solid transparent;
+		}
+		.break-table tr td:first-child, .break-table tr th:first-child {
+			border-left: 0.1rem solid transparent;
+			text-align: center;
+		}
+		.break-table tr td:last-child, .break-table tr th:last-child {
+			border-right: 0.1rem solid transparent;
+		}
+		.w-450{
+			width: 450px;
+			max-width: 450px;
+		}
+	</style>
+<script>var BASE_URL = 'https://localhost/masonry/'</script>
+		<!-- Required jQuery first, then Bootstrap Bundle JS -->
+		<script src="https://localhost/masonry/js/jquery.min.js"></script>
+		<script src="https://localhost/masonry/js/jquery-ui.min.js"></script>
+		<script src="https://localhost/masonry/js/bootstrap.bundle.min.js"></script>
+		<script src="https://localhost/masonry/js/moment.js"></script>
+		<!-- Slimscroll JS -->
+		<script src="https://localhost/masonry/vendor/slimscroll/slimscroll.min.js"></script>
+		<script src="https://localhost/masonry/vendor/slimscroll/custom-scrollbar.js"></script>
+		<!-- Daterange -->
+		<script src="https://localhost/masonry/vendor/daterange/daterange.js"></script>
+
+		<!-- Datepickers -->
+		<script src="https://localhost/masonry/vendor/datepicker/js/picker.js"></script>
+		<script src="https://localhost/masonry/vendor/datepicker/js/picker.date.js"></script>
+		<script src="https://localhost/masonry/vendor/datepicker/js/picker.time.js"></script>
+		<script src="https://localhost/masonry/vendor/datepicker/js/custom-picker.js"></script>
+		
+		<!-- Summernote JS -->
+		<script src="https://localhost/masonry/vendor/summernote/summernote-bs4.js"></script>
+
+		<script src="https://localhost/masonry/vendor/lobipanel/js/lobipanel.js"></script>
+		
+		<script src="https://localhost/masonry/vendor/bs-select/bs-select.min.js"></script>
+		
+		<script src="https://localhost/masonry/vendor/range-slider/ion.rangeSlider.min.js"></script>
+		
+		<script src="https://localhost/masonry/vendor/notify/notify.js"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
+		
+		<!-- Table 2 Excel JS -->
+		<script src="https://localhost/masonry/vendor/table2excel/jquery.table2excel.min.js"></script>
+		
+		<!-- Table 2 CSV JS -->
+		<script src="https://localhost/masonry/vendor/table2csv/jquery.table2csv.min.js"></script>
+		
+		<script src="https://localhost/masonry/js/main.js"></script>
+		
+		<!-- Signature pad JS -->
+		<script src="https://localhost/masonry/vendor/signature/js/jquery.signaturepad.js"></script>
+		<script type='text/javascript' src="https://github.com/niklasvh/html2canvas/releases/download/0.4.1/html2canvas.js"></script>
+
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuRuPvJP9uVsxkf2RukxYzKWNrU5xGSMM&libraries=places&callback=initAutocomplete" async defer></script>
+
+		<script src="https://localhost/masonry/js/custom.js"></script>
+<style type="text/css">
+	.pac-container{z-index: 1100;}
+</style>
+<script type='text/javascript'>
+	$(".preloader").delay(900).fadeOut(100).css({
+		"transform": "rotate(-35deg) scale(20)",
+		"opacity": "0"
+	});
+	
+	$(document).ready(function() {
+		$('.report_terms_conditions').summernote({
+			height: 170,
+			tabsize: 2
+		});
+	});
+</script type='text/javascript'>
+		
+	</body>
+</html>
+<script type="text/javascript">
+	function myFunction(x) {
+		if (x.matches) {
+			$('.page-wrapper').removeClass('filtered');
+		} else {
+			$('.page-wrapper').addClass('filtered');
+		}
+	}
+
+	var x = window.matchMedia("(max-width: 768px)");
+	myFunction(x);
+	x.addListener(myFunction);
+	
+	function KanBan(){
+		
+		let filter_report_type = $('input:radio[name=filter_report_type]:checked').val();
+		let select_date_range = $('#select_date_range').prop('checked');
+		let filter_crew_name = $('#filter_crew_name').val();
+		
+		let view_type = '';
+
+		if(select_date_range == true){
+			let filter_date_range = $('#filter_date_range').val();
+			let date_range = filter_date_range.split(" - ");
+			
+			let StartDate = date_range[0];
+			let EndDate = date_range[1];
+			
+			let StartDateFormat = moment(StartDate).format('YYYY-MM-DD');
+			let EndDateFormat = moment(EndDate).format('YYYY-MM-DD');
+		
+			if(view_type == 'kanban'){
+				view_type = 'grid';
+			}else{
+				view_type = 'kanban';
+			}
+			window.location.assign(BASE_URL+"company/reports.html?type="+filter_report_type+"&crew="+filter_crew_name+"&st="+StartDateFormat+"&et="+EndDateFormat+"&viewtype="+view_type);
+		} else {
+			window.location.assign(BASE_URL+"company/reports.html?type="+filter_report_type+"&crew="+filter_crew_name);
+		}
+	}
+	
+	var report_id = '';
+    let report_data = [];
+    let report_approve = [];
+	let employee_data = [];
+    let reportDetail = [];
+
+	$('#apply_filter').click(function(){
+		let filter_report_type = $('input:radio[name=filter_report_type]:checked').val();
+		let select_date_range = $('#select_date_range').prop('checked');
+		let filter_crew_name = $('#filter_crew_name').val();
+		
+		let view_type = '';
+		
+		if(select_date_range == true){
+			let filter_date_range = $('#filter_date_range').val();
+			let date_range = filter_date_range.split(" - ");
+			
+			let StartDate = date_range[0];
+			let EndDate = date_range[1];
+			
+			let StartDateFormat = moment(StartDate).format('YYYY-MM-DD');
+			let EndDateFormat = moment(EndDate).format('YYYY-MM-DD');
+		
+			if(view_type == '')
+			{
+				window.location.assign(BASE_URL+"company/reports.html?type="+filter_report_type+"&crew="+filter_crew_name+"&st="+StartDateFormat+"&et="+EndDateFormat);
+			}else{
+				if(filter_crew_name == 'All'){
+					window.location.assign(BASE_URL+"company/reports.html?type="+filter_report_type+"&crew="+filter_crew_name+"&st="+StartDateFormat+"&et="+EndDateFormat);
+				}else{
+					window.location.assign(BASE_URL+"company/reports.html?type="+filter_report_type+"&crew="+filter_crew_name+"&st="+StartDateFormat+"&et="+EndDateFormat+"&viewtype="+view_type);
+				}
+			}
+		} else {
+			window.location.assign(BASE_URL+"company/reports.html?type="+filter_report_type+"&crew="+filter_crew_name);
+		}
+	});
+	
+    function selectReport(selectId)
+    {
+        let chk = report_approve.includes(selectId);
+		let SelectedReport = $('#SelectedReport'+selectId);
+		let DeSelectedReport = $('#DeSelectedReport'+selectId);
+		if(SelectedReport.hasClass("Pending")){
+			if(chk)
+			{
+				report_approve = report_approve.filter(x => x !== selectId);
+				
+				SelectedReport.addClass('d-none');
+				DeSelectedReport.removeClass('d-none');
+				
+			}else{
+				report_approve.push(selectId);
+				
+				SelectedReport.removeClass('d-none');
+				DeSelectedReport.addClass('d-none');
+			}
+		}
+    }
+	
+	function SelectAll()
+    {
+		report_approve = [];
+		
+		let SelectedReport = $(".SelectedReport.Pending");
+		let DeSelectedReport = $(".DeSelectedReport.Pending");
+		
+		for(let sr = 0; sr < SelectedReport.length; sr++){
+			report_approve.push(parseInt(SelectedReport[sr].dataset.id));
+		}
+		
+		SelectedReport.removeClass('d-none');
+		DeSelectedReport.addClass('d-none');
+	}
+	
+	function DeSelectAll()
+    {
+		report_approve = [];
+		
+		let SelectedReport = $(".SelectedReport.Pending");
+		let DeSelectedReport = $(".DeSelectedReport.Pending");
+		
+		SelectedReport.addClass('d-none');
+		DeSelectedReport.removeClass('d-none');
+	}
+	
+	/**
+	 * Kanban Bonus code above/select mutiple
+	 */
+	function bonusCalculateReport(value,bonusId1,report_id,ids)
+	{
+		let bonusValue = value;
+		let bonusId = bonusId1;
+		let empIds = [];
+		empIds = ids.split(",");
+		
+		let total_bonus = 0;
+		let total_payment = 0;
+		let salary_total = 0;
+		let sign = 'CA&#36;';
+		let crew_total = 0;
+
+		let payoutBrk = '';
+		let brkpayouts = [];
+		brkpayouts = payoutBrk.split(",");
+
+		let revenue = parseFloat($('.revenue_report'+report_id).text());
+
+		empIds.forEach(function (item) {
+			$('td[data-break-emp-report_id="'+report_id+''+item+''+bonusId+'"] select').val(value);
+			
+			let net = parseFloat($('.emp_original_net'+report_id+'_'+item).text());
+			let cal = 0;
+			let total_bonus = 0;
+			let payout_rate = parseFloat($('.emp_payout'+item).text());
+
+			let apply_bonus = parseFloat($('.applyBonus'+bonusId+'_'+report_id+'_'+item).text());
+			let bonus_rate = parseFloat($('.bonusRate'+bonusId+'_'+report_id+'_'+item).text());
+			let break_type = parseFloat($('.breakType'+bonusId+'_'+report_id+'_'+item).text());
+			let payout_type = parseFloat($('.payoutType'+bonusId+'_'+report_id+'_'+item).text());
+
+			let new_bonus = 0;
+			if(apply_bonus == 1){
+				$('.bonusValueId'+bonusId+'_'+report_id+'_'+item).html(bonusValue);
+
+				if(parseInt(payout_type) == 0){
+					if(parseInt(break_type) == 0){
+						new_bonus = -(payout_rate * bonusValue * bonus_rate);
+					}else if(parseInt(break_type) == 1){
+						new_bonus = payout_rate * bonusValue * bonus_rate;
+					}
+				}else {
+					if(parseInt(break_type) == 0){
+						new_bonus = -( bonusValue * bonus_rate);
+					}else if(parseInt(break_type) == 1){
+						new_bonus =  bonusValue * bonus_rate;
+					}
+				}
+			}
+			let total = parseFloat(new_bonus);
+			let sign = $('.bonus_amount'+bonusId+'_'+report_id+'_'+item).html(total);
+			$('.bonus_amount'+bonusId+'_'+report_id+'_'+item).html(total);
+
+			brkpayouts.forEach(function (brkReport) {
+				let total = parseFloat($('.bonus_amount'+brkReport+'_'+report_id+'_'+item).text());
+				total_bonus += total;
+			});
+
+			$('.emp_total_bonus'+report_id+'_'+item).html(total_bonus);
+			cal += (parseFloat(total_bonus) + parseFloat(net));
+			$('.emp_net'+report_id+'_'+item).html(cal);
+			crew_total += cal;
+
+		});
+		let net_total = revenue - crew_total;
+		$('.crew_cost_report'+report_id).html(crew_total.toFixed(2));
+		$('.net_report'+report_id).html(net_total.toFixed(2));
+
+		let calc_footer = calculateCrewRevenueNet();
+		let calc_horizontal = calculateBonusSalary();
+	}
+
+	//calculate 
+	function calculateCrewRevenueNet()
+	{
+		let crew_total = 0;
+		let revenue_total = 0;
+		let net_total = 0;
+		let filterReport = '';
+
+		let reportIds = [];
+		reportIds = filterReport.split(",");
+		reportIds.forEach(function (item) {
+			crew_total += parseFloat($('.crew_cost_report'+item).html());
+			revenue_total += parseFloat($('.revenue_report'+item).html());
+			net_total += parseFloat($('.net_report'+item).html());
+		});
+		$('.grand_crew_cost').html(crew_total.toFixed(2));
+		$('.grand_revenue').html(revenue_total.toFixed(2));
+		$('.grand_net').html(net_total.toFixed(2));
+	}
+
+	//calculateBonusSalary
+	function calculateBonusSalary()
+	{
+		let week_bonus_payment = 0;
+		let week_salary_all = 0;
+
+		let allEmp = '';
+		let empIds = [];
+		empIds = allEmp.split(",");
+		let filterReport = '';
+		let reportIds = [];
+		reportIds = filterReport.split(",");
+
+		let payoutBrk = '';
+		let brkpayouts = [];
+		brkpayouts = payoutBrk.split(",");
+
+		empIds.forEach(function (itemEmp) {
+			let bonus_total = 0;
+			let bonus_payment = 0;
+			let salary_all = parseFloat($('.original_all_total'+itemEmp).html()) ;
+			reportIds.forEach(function (itemReport) {
+				brkpayouts.forEach(function (brkReport) {
+					let bonusAction = 0;
+					bonusAction = parseFloat($('.bonusAction'+brkReport+'_'+itemReport+'_'+itemEmp).text());
+					if($('.bonusValueId'+brkReport+'_'+ itemReport+'_'+itemEmp).html() == '' || $('.bonusValueId'+brkReport+'_'+ itemReport+'_'+itemEmp).html() == undefined){
+						bonus_total += 0;
+					}else {
+						if(bonusAction == '0'){
+							bonus_total -= parseFloat($('.bonusValueId'+brkReport+'_'+ itemReport+'_'+itemEmp).html());
+						}else {
+							bonus_total += parseFloat($('.bonusValueId'+brkReport+'_'+ itemReport+'_'+itemEmp).html());
+						}
+					}
+					if($('.bonus_amount'+brkReport+'_'+itemReport+'_'+itemEmp).html() == '' || $('.bonus_amount'+brkReport+'_'+itemReport+'_'+itemEmp).html() == undefined){
+						bonus_payment += 0;
+					}else {
+						bonus_payment += parseFloat($('.bonus_amount'+brkReport+'_'+itemReport+'_'+itemEmp).html());
+					}
+
+				});
+			});
+			$('.total_bonus'+itemEmp).html(bonus_total);
+			$('.bonus_payment'+itemEmp).html(bonus_payment);
+			salary_all = parseFloat(bonus_payment) +  salary_all;
+			$('.all_total'+itemEmp).html(salary_all);
+
+			week_salary_all += salary_all;
+			week_bonus_payment += bonus_payment;
+		});
+		$('.week_bonus_payment').html(week_bonus_payment);
+		$('.week_all_total').html(week_salary_all);
+	}
+
+	//single bonus calculate
+	function newbonusCalculateReport(value,bonusId,report_id,empid)
+	{
+		let bonusValue = value;
+		let allEmp = '';
+		let empIds = [];
+		empIds = allEmp.split(",");
+
+		let payoutBrk = '';
+		let brkpayouts = [];
+		brkpayouts = payoutBrk.split(",");
+		
+		let crew_total = 0;
+
+		let net = parseFloat($('.emp_original_net'+report_id+'_'+empid).text());
+		let cal = 0;
+		let total_bonus = 0;
+		let payout_rate = parseFloat($('.emp_payout'+empid).text());
+		
+
+		let apply_bonus = parseFloat($('.applyBonus'+bonusId+'_'+report_id+'_'+empid).text());
+		let bonus_rate = parseFloat($('.bonusRate'+bonusId+'_'+report_id+'_'+empid).text());
+		let break_type = parseFloat($('.breakType'+bonusId+'_'+report_id+'_'+empid).text());
+		let payout_type = parseFloat($('.payoutType'+bonusId+'_'+report_id+'_'+empid).text());
+
+		let new_bonus = 0;
+		if(apply_bonus == 1){
+			$('.bonusValueId'+bonusId+'_'+report_id+'_'+empid).html(bonusValue);
+			
+			if(parseInt(payout_type) == 0){
+				if(parseInt(break_type) == 0){
+					new_bonus = -(payout_rate * bonusValue * bonus_rate);
+				}else if(parseInt(break_type) == 1){
+					new_bonus = payout_rate * bonusValue * bonus_rate;
+				}
+			}else {
+				if(parseInt(break_type) == 0){
+					new_bonus = -( bonusValue * bonus_rate);
+				}else if(parseInt(break_type) == 1){
+					new_bonus =  bonusValue * bonus_rate;
+				}
+			}
+		}
+		let total = parseFloat(new_bonus);
+		$('.bonus_amount'+bonusId+'_'+report_id+'_'+empid).html(total);
+
+		// Get value from all
+		brkpayouts.forEach(function (brkReport) {
+			let total = parseFloat($('.bonus_amount'+brkReport+'_'+report_id+'_'+empid).text());
+			total_bonus += total;
+		});
+
+		$('.emp_total_bonus'+report_id+'_'+empid).html(total_bonus);
+		cal += (parseFloat(total_bonus) + parseFloat(net));
+		$('.emp_net'+report_id+'_'+empid).html(cal);
+
+		let revenue = parseFloat($('.revenue_report'+report_id).text());
+		empIds.forEach(function (item) {
+			if( ($('.emp_net'+report_id+'_'+item).html()) == undefined)
+			{
+				crew_total += 0;
+			}else {
+				crew_total += parseFloat($('.emp_net'+report_id+'_'+item).html());
+			}
+		});
+		let net_total = revenue - crew_total;
+		$('.crew_cost_report'+report_id).html(crew_total);
+		$('.net_report'+report_id).html(net_total);
+		let calc_footer = calculateCrewRevenueNet();
+		let calc_horizontal = calculateBonusSalary();
+	}
+	//bonus
+	// decline
+	function bonusCalculateDeclinedReport(value,bonusId1,report_id,ids)
+	{
+		let bonusValue = value;
+		let bonusId = bonusId1;
+		let empIds = [];
+		empIds = ids.split(",");
+		
+		let total_bonus = 0;
+		let total_payment = 0;
+		let salary_total = 0;
+		let sign = 'CA&#36;';
+		let crew_total = 0;
+
+		let payoutBrk = '';
+		let brkpayouts = [];
+		brkpayouts = payoutBrk.split(",");
+
+		let revenue = parseFloat($('.revenue_report'+report_id).text());
+
+		empIds.forEach(function (item) {
+			$('td[data-break-emp-report_id="'+report_id+''+item+''+bonusId+'"] select').val(value);
+			
+			let net = parseFloat($('.emp_original_net'+report_id+'_'+item).text());
+			let cal = 0;
+			let total_bonus = 0;
+			let payout_rate = parseFloat($('.emp_payout'+item).text());
+
+			let apply_bonus = parseFloat($('.applyBonus'+bonusId+'_'+report_id+'_'+item).text());
+			let bonus_rate = parseFloat($('.bonusRate'+bonusId+'_'+report_id+'_'+item).text());
+			let break_type = parseFloat($('.breakType'+bonusId+'_'+report_id+'_'+item).text());
+			let payout_type = parseFloat($('.payoutType'+bonusId+'_'+report_id+'_'+item).text());
+
+			let new_bonus = 0;
+			if(apply_bonus == 1){
+				$('.bonusValueId'+bonusId+'_'+report_id+'_'+item).html(bonusValue);
+
+				if(parseInt(payout_type) == 0){
+					if(parseInt(break_type) == 0){
+						new_bonus = -(payout_rate * bonusValue * bonus_rate);
+					}else if(parseInt(break_type) == 1){
+						new_bonus = payout_rate * bonusValue * bonus_rate;
+					}
+				}else {
+					if(parseInt(break_type) == 0){
+						new_bonus = -( bonusValue * bonus_rate);
+					}else if(parseInt(break_type) == 1){
+						new_bonus =  bonusValue * bonus_rate;
+					}
+				}
+			}
+			let total = parseFloat(new_bonus);
+			let sign = $('.bonus_amount'+bonusId+'_'+report_id+'_'+item).html(total);
+			$('.bonus_amount'+bonusId+'_'+report_id+'_'+item).html(total);
+
+			brkpayouts.forEach(function (brkReport) {
+				let total = parseFloat($('.bonus_amount'+brkReport+'_'+report_id+'_'+item).text());
+				total_bonus += total;
+			});
+
+			$('.emp_total_bonus'+report_id+'_'+item).html(total_bonus);
+			cal += (parseFloat(total_bonus) + parseFloat(net));
+			$('.emp_net'+report_id+'_'+item).html(cal);
+			crew_total += cal;
+
+		});
+		let net_total = revenue - crew_total;
+		$('.crew_cost_report'+report_id).html(crew_total.toFixed(2));
+		$('.net_report'+report_id).html(net_total.toFixed(2));
+	}
+
+	function newbonusCalculateDeclinedReport(value,bonusId,report_id,empid)
+	{
+		let bonusValue = value;
+		let allEmp = '';
+		let empIds = [];
+		empIds = allEmp.split(",");
+
+		let payoutBrk = '';
+		let brkpayouts = [];
+		brkpayouts = payoutBrk.split(",");
+		
+		let crew_total = 0;
+
+		let net = parseFloat($('.emp_original_net'+report_id+'_'+empid).text());
+		let cal = 0;
+		let total_bonus = 0;
+		let payout_rate = parseFloat($('.emp_payout'+empid).text());
+		
+
+		let apply_bonus = parseFloat($('.applyBonus'+bonusId+'_'+report_id+'_'+empid).text());
+		let bonus_rate = parseFloat($('.bonusRate'+bonusId+'_'+report_id+'_'+empid).text());
+		let break_type = parseFloat($('.breakType'+bonusId+'_'+report_id+'_'+empid).text());
+		let payout_type = parseFloat($('.payoutType'+bonusId+'_'+report_id+'_'+empid).text());
+
+		let new_bonus = 0;
+		if(apply_bonus == 1){
+			$('.bonusValueId'+bonusId+'_'+report_id+'_'+empid).html(bonusValue);
+			
+			if(parseInt(payout_type) == 0){
+				if(parseInt(break_type) == 0){
+					new_bonus = -(payout_rate * bonusValue * bonus_rate);
+				}else if(parseInt(break_type) == 1){
+					new_bonus = payout_rate * bonusValue * bonus_rate;
+				}
+			}else {
+				if(parseInt(break_type) == 0){
+					new_bonus = -( bonusValue * bonus_rate);
+				}else if(parseInt(break_type) == 1){
+					new_bonus =  bonusValue * bonus_rate;
+				}
+			}
+		}
+		let total = parseFloat(new_bonus);
+		$('.bonus_amount'+bonusId+'_'+report_id+'_'+empid).html(total);
+
+		// Get value from all
+		brkpayouts.forEach(function (brkReport) {
+			let total = parseFloat($('.bonus_amount'+brkReport+'_'+report_id+'_'+empid).text());
+			total_bonus += total;
+		});
+
+		$('.emp_total_bonus'+report_id+'_'+empid).html(total_bonus);
+		cal += (parseFloat(total_bonus) + parseFloat(net));
+		$('.emp_net'+report_id+'_'+empid).html(cal);
+
+		let revenue = parseFloat($('.revenue_report'+report_id).text());
+		empIds.forEach(function (item) {
+			if( ($('.emp_net'+report_id+'_'+item).html()) == undefined)
+			{
+				crew_total += 0;
+			}else {
+				crew_total += parseFloat($('.emp_net'+report_id+'_'+item).html());
+			}
+		});
+		let net_total = revenue - crew_total;
+		$('.crew_cost_report'+report_id).html(crew_total);
+		$('.net_report'+report_id).html(net_total);
+	}
+
+	function approveKanban(report_id_kanban,reportEmpIds)
+	{
+		let report_detail_array = [];
+		let report_detail_array1 = [];
+		let allEmp = reportEmpIds;
+		let bonus_payment = 0;
+		let apply_bonus_status = 0;
+		let empIds = [];
+		empIds = allEmp.split(",");
+
+		let payoutBrk = '';
+		let brkpayouts = [];
+		brkpayouts = payoutBrk.split(",");
+
+		empIds.forEach(function (itemEmp) {
+			brkpayouts.forEach(function (brkReport) {
+				let bonus_value = $('.bonusValueId'+brkReport+'_'+report_id_kanban+'_'+itemEmp).html();
+				let single_bonus = 0;
+				if($('.bonus_amount'+brkReport+'_'+report_id_kanban+'_'+itemEmp).html() == '' || $('.bonus_amount'+brkReport+'_'+report_id_kanban+'_'+itemEmp).html() == undefined)
+				{
+					single_bonus = 0;
+				}else {
+					single_bonus = parseFloat($('.bonus_amount'+brkReport+'_'+report_id_kanban+'_'+itemEmp).html());
+				}
+
+				data = {
+					'emp_id' : itemEmp,
+					'break_id' : brkReport,
+					'new_bonus_value' : bonus_value,
+					'calc_bonus' : single_bonus
+				};
+				report_detail_array.push(data);
+			});
+			let bounus_total = parseFloat($('.emp_total_bonus'+report_id_kanban+'_'+itemEmp).html());
+			bonus_payment += bounus_total;
+		});
+		if(bonus_payment != 0)
+		{
+			apply_bonus_status = 1;
+		}
+		re = {
+				'report_id' : report_id_kanban,
+				'emp': report_detail_array,
+				'total_bonus' : bonus_payment,
+				'apply_bonus_status' : apply_bonus_status,
+			};
+		report_detail_array1.push(re);
+		//console.log(report_detail_array1);
+
+	
+
+	let totalValidReport = '';
+	function setCheckbox(selectId){
+		let chk = report_approve.includes(selectId);
+		if(chk){
+			report_approve = report_approve.filter(x => x !== selectId);
+		}else{
+			report_approve.push(selectId);
+		}
+
+		let length = report_approve.length;
+		if(length == totalValidReport){
+			document.getElementById("customCheck").checked = true;
+		}else{
+			document.getElementById("customCheck").checked = false;
+
+		}
+		// console.log(length);
+		$('.all_selected_count').html(zeroSpace(length,2));
+		if(length > 0){
+			$('.all_select_checkbox').show();
+		}else{
+			$('.all_select_checkbox').hide();
+		}
+	}
+
+	//bonus
+	function approveSelected(){
+		let filterReport = report_approve;
+		let reportIds = [];
+		reportIds = report_approve;
+
+		if(reportIds.length == 0){
+			notes.show("Minimum one report required.", {
+				type: 'danger',
+				title: 'No Report Selected',
+				icon: '<i class="icon-alert-triangle"></i>'
+			});
+			return false;
+		}
+
+		let report_detail_array1 = [];
+		let allEmp = '';;
+		let bonus_payment = 0;
+		let apply_bonus_status = 0;
+		let empIds = [];
+		empIds = allEmp.split(",");
+
+		let payoutBrk = '';
+		let brkpayouts = [];
+		brkpayouts = payoutBrk.split(",");
+		
+		reportIds.forEach(function (itemReport) {
+			let report_detail_array = [];
+			empIds.forEach(function (itemEmp) {
+
+				brkpayouts.forEach(function (brkReport) {
+				let bonus_value = $('.bonusValueId'+brkReport+'_'+itemReport+'_'+itemEmp).html();
+				let single_bonus = 0;
+				if($('.bonus_amount'+brkReport+'_'+itemReport+'_'+itemEmp).html() == '' || $('.bonus_amount'+brkReport+'_'+itemReport+'_'+itemEmp).html() == undefined)
+				{
+					single_bonus = 0;
+				}else {
+					single_bonus = parseFloat($('.bonus_amount'+brkReport+'_'+itemReport+'_'+itemEmp).html());
+				}
+
+				data = {
+					'emp_id' : itemEmp,
+					'break_id' : brkReport,
+					'new_bonus_value' : bonus_value,
+					'calc_bonus' : single_bonus,
+					're': itemReport
+				};
+				report_detail_array.push(data);
+			});
+			let bounus_total = parseFloat($('.emp_total_bonus'+itemReport+'_'+itemEmp).html());
+			bonus_payment += bounus_total;
+			});
+
+			if(bonus_payment != 0)
+			{
+				apply_bonus_status = 1;
+			}
+			re = {
+					'report_id' : itemReport,
+					'emp': report_detail_array,
+					'total_bonus' : bonus_payment,
+					'apply_bonus_status' : apply_bonus_status,
+				};
+			report_detail_array1.push(re);
+		});
+		
+		// console.log(report_detail_array1);
+
+
+    function getApproveData(a){
+        report_id =a;
+        $.ajax({
+            type: "POST",
+            url: BASE_URL+"include/function2.html",
+            data:{report_id:a},
+            cache: false,
+            dataType: "json",
+            success: function(html){
+                //console.log(html);
+                $('#vCenterModal').modal('show');
+                $('.approve_data').empty();
+                
+                reportDetail = html;
+                let emp_count = 0;
+				report_json_data = [];
+				// employee_data = [];
+				
+                $.each(html, function( key, value ) {
+					report_json_data.push(value);
+					report_json_data[emp_count].checked = 1;
+					
+                   report_data = '<div class="table-container border-bottom-0"><div class="table-responsive"> <table class="table table-bordered table-striped table-sm m-0"><thead><tr><th colspan="11">'+value.name+'</th></tr></thead><tbody><tr><th></th><th>D.O.R</th><th>TH</th><th>Avg</th><th>Break</th><th>Total</th>';
+				   
+				   for(let pay_head=0; pay_head< value.payout_breaks.length; pay_head++){
+                   report_data += '<th>'+value.payout_breaks[pay_head].short_name+'</th>';
+                   }
+                   report_data +='<th>Crew Cost</th><th>Revenue</th><th>Total Net</th></tr><tr><td class="clickable" data-toggle="collapse" data-target="#row'+value.report_id+'"><span class="icon-chevron-right1 text-danger"></span></td><td>'+value.fromdate+'</td><td>'+value.total_hours+'</td><td>'+value.average+'</td><td>'+value.break_time+'</td><td>'+value.subtotal+'</td>';
+                   for(let pay=0; pay< value.payout_breaks.length; pay++){
+                   
+                   report_data +='<td><select class="form-control" id="bonus'+value.payout_breaks[pay].id+'" onchange="bonusCalculate('+value.payout_breaks[pay].id+',this.value,'+value.report_id+')">';
+                    for(let b=0; b< value.payout_breaks[pay].bonus.length; b++){
+                        report_data += '<option value="'+value.payout_breaks[pay].bonus[b].label+'">'+value.payout_breaks[pay].bonus[b].label+'</option>';
+                    }
+                    report_data += '</select></td>';
+                    }
+                   report_data += '<td data-report_id-type="'+value.report_id+'crew">'+value.crew_cost+'</td><td>'+value.revenue+'</td><td class="'+value.p_l_status+'" data-report_id-type="'+value.report_id+'total_grand">'+value.net+'</td></tr></tbody></table>'+
+                   '<table id="row'+value.report_id+'" class="collapse table table-bordered table-sm m-0"><thead><tr><th colspan="7" class="bg-white border-bottom">Employee Detail</th></tr>'+
+                   '<tr><th>Name</th><th>Rate</th><th class="p-0 w-450"><table class="break-table"><tbody><tr><th>Lot Name</th><th>Total Hrs</th>';
+                   for(let head=0; head < value.table_head.length; head++){
+                    if(value.table_head[head].job_break == 1){
+                        report_data +='<th>'+value.table_head[head].short_name+'</th>';
+                    }
+                   }
+                   report_data +='</tr></tbody></table></th>';
+				   for(let head=0; head < value.table_head.length; head++){
+					   if(value.table_head[head].job_break == 0){
+						   report_data +='<th>'+value.table_head[head].short_name+'</th>';
+						}
+					}
+					report_data +='<th>TH</th>';
+				   
+				   for(let pay_head=0; pay_head< value.payout_breaks.length; pay_head++){
+					report_data += '<th>'+value.payout_breaks[pay_head].short_name+'</th>';
+                   }
+				   
+				   report_data += '<th>Total</th><th>Net</th></tr></thead>'+
+				   '<tbody>';
+                   for(let emp=0; emp < value.employee.length; emp++){
+                    report_data +='<tr><td>'+value.employee[emp].employee_name+'</td><td>'+value.employee[emp].payout_rate+'</td><td class="p-0 w-450"><table class="break-table"><tbody>';
+                    for(let empl_detail = 0; empl_detail < value.employee[emp].employee_working.length; empl_detail++){
+                        report_data +='<tr><td>'+value.employee[emp].employee_working[empl_detail].job_name+'</td><td>'+value.employee[emp].employee_working[empl_detail].job_working_hours+' Hrs '+value.employee[emp].employee_working[empl_detail].job_working_mins+' Mins</td>';
+                        for(let job_break = 0; job_break < value.employee[emp].employee_working[empl_detail].job_break.length; job_break++){
+							if(value.employee[emp].employee_working[empl_detail].job_category == 0)
+							{
+								report_data +='<td>'+value.employee[emp].employee_working[empl_detail].job_break[job_break].break_hours+' Hrs '+value.employee[emp].employee_working[empl_detail].job_break[job_break].break_mins+' Mins</td>';
+							}else {
+								report_data +='<td>'+value.employee[emp].employee_working[empl_detail].job_break[job_break].break_hours+' unit</td>';
+							}
+                        }
+                        report_data +='</tr>';
+                    }
+                    report_data +='</tbody></table></td>';
+                    for(let emp_break= 0; emp_break < value.employee[emp].employee_break.length; emp_break++){
+						if(value.employee[emp].employee_break[emp_break].break_category == 0)
+						{
+							report_data +='<td>'+value.employee[emp].employee_break[emp_break].break_hours+' Hrs '+value.employee[emp].employee_break[emp_break].break_mins+' Mins</td>';
+						}else {
+							report_data +='<td>'+value.employee[emp].employee_break[emp_break].break_hours+' unit</td>';
+						}
+                    }
+                    report_data +='<td>'+value.employee[emp].total_hours+' Hrs '+ value.employee[emp].total_mins+' Mins</td>';
+					for(let pay_head=0; pay_head< value.payout_breaks.length; pay_head++){
+						
+						report_data +='<td data-break-emp-report_id="'+value.payout_breaks[pay_head].id+value.employee[emp].employee_id+value.report_id+'"><select class="form-control" id="empbonus'+value.payout_breaks[pay_head].id+'" onchange="newBonusCalculate('+value.payout_breaks[pay_head].id+',this.value,'+value.report_id+','+emp_count+','+value.employee[emp].employee_id+')">';
+						
+						for(let b=0; b< value.payout_breaks[pay_head].bonus.length; b++){
+							report_data += '<option value="'+value.payout_breaks[pay_head].bonus[b].label+'">'+value.payout_breaks[pay_head].bonus[b].label+'</option>';
+						}
+						
+						report_data += '</select></td>';
+
+					}
+                    report_data += '<td data-emp-report_id-type="'+value.employee[emp].employee_id+value.report_id+'total"></td>';
+                    report_data +='<td data-emp-report_id-type="'+value.employee[emp].employee_id+value.report_id+'net">'+value.employee[emp].total_payout+'</td></tr>';
+                   }
+                   report_data +='</tbody></table>'+
+				   '<table id="row'+value.report_id+'" class="collapse table table-bordered table-sm"><thead><tr><th colspan="4" class=" border-bottom">Item Detail</th></tr>'+
+				   '<tr><th>Item Name</th><th>Qty</th><th>Total</th></tr></thead><tbody>';
+						for(let i = 0; i < value.item.length; i++) {
+							let cal = 0;
+							cal = parseFloat(value.item[i].rate) * parseFloat(value.item[i].item_qty);
+							report_data +='<tr><td>'+value.item[i].item_name+'</td><td>'+value.item[i].item_qty+' '+value.item[i].unit_measurement+'</td><td>'+value.item[i].cost+'</td></tr>';
+						}
+					report_data +='</tbody></table></div></div>';
+					$('.approve_data').append(report_data);
+					emp_count++;
+				});
+            }
+        });
+    }
+
+    function bonusCalculate(id,value,report_id){
+        let new_bonus = 0;
+		let total_net = 0;
+		let total_bonus = 0;
+		let grand_total_bonus = 0;
+		let apply_bonus_status = 0;
+		let crew_cost = 0;
+
+		for(let rjd = 0; rjd< report_json_data.length; rjd++){
+			if(report_json_data[rjd].report_id == report_id){
+				let employee_detail = report_json_data[rjd].employee;
+				for(let rd = 0; rd < employee_detail.length; rd++){
+					let emp_payout_rate = employee_detail[rd].payout_rate;
+					let payout_data = employee_detail[rd].payout_break;
+					let total_bonus = 0;
+					for(let rbd = 0; rbd < payout_data.length; rbd++){
+						if(payout_data[rbd].payout_break_id == id){
+							if(payout_data[rbd].apply_bonus == 1)
+							{
+								if(payout_data[rbd].payout_type == 0){
+									if(payout_data[rbd].break_type == 0){
+										new_bonus = -emp_payout_rate * value * payout_data[rbd].bonus_rate;
+									} else if(payout_data[rbd].break_type == 1) {
+										new_bonus = emp_payout_rate * value * payout_data[rbd].bonus_rate;
+									}
+								} else {
+									if(payout_data[rbd].break_type == 0){
+										new_bonus =  -value * payout_data[rbd].bonus_rate;
+									} else if(payout_data[rbd].break_type == 1) {
+										new_bonus =  value * payout_data[rbd].bonus_rate;
+									}
+								}
+								payout_data[rbd].new_bonus_value = value; 
+							}
+							payout_data[rbd].break_amount = new_bonus;	
+						}
+					}
+					
+					for(let rba = 0; rba < payout_data.length; rba++){
+						total_bonus += payout_data[rba].break_amount;
+					}
+					
+					total_net = total_bonus + employee_detail[rd].total_payout;
+					crew_cost += total_net;
+				
+					$('td[data-break-emp-report_id="'+id+''+employee_detail[rd].employee_id+''+report_id+'"] select').val(value);
+					$('td[data-emp-report_id-type="'+employee_detail[rd].employee_id+''+report_id+'total"]').html(total_bonus);
+					$('td[data-emp-report_id-type="'+employee_detail[rd].employee_id+''+report_id+'net"]').html(total_net);
+					
+					if(total_bonus != 0)
+					{
+						apply_bonus_status = 1;
+					}else {
+						apply_bonus_status = 0;
+					}
+
+					// employee_detail[rd].new_bonus_value = total_bonus; 
+					// employee_detail[rd].total_net = total_net; 
+					grand_total_bonus += total_bonus;
+					
+				}
+				let grand_total = report_json_data[rjd].revenue - crew_cost;
+				
+				if(grand_total > 0){
+					// $('td[data-report_id-type="'+report_json_data[rjd].report_id+'total_grand"]').attr('class', "approved");
+					$('td[data-report_id-type="'+report_id+'total_grand"]').attr('class', "approved");
+				} else {
+					// $('td[data-report_id-type="'+report_json_data[rjd].report_id+'total_grand"]').attr('class', "declined");
+					$('td[data-report_id-type="'+report_id+'total_grand"]').attr('class', "declined");
+				}
+			
+				// report_json_data[rjd].crew_cost = crew_cost;
+				// report_json_data[rjd].grand_total = report_json_data[rjd].revenue - crew_cost;
+				report_json_data[rjd].total_bonus = grand_total_bonus;
+				report_json_data[rjd].apply_bonus_status = apply_bonus_status;
+				// $('td[data-report_id-type="'+report_json_data[rjd].report_id+'crew"]').html(crew_cost); 
+				// $('td[data-report_id-type="'+report_json_data[rjd].report_id+'total_grand"]').html(grand_total);
+				$('td[data-report_id-type="'+report_id+'crew"]').html(crew_cost); 
+				$('td[data-report_id-type="'+report_id+'total_grand"]').html(grand_total);
+
+				let payout_detail = report_json_data[rjd].payout_breaks;
+				for(let pbk = 0; pbk < payout_detail.length; pbk++)
+				{
+					if(payout_detail[pbk].id == id)
+					{
+						payout_detail[pbk].new_bonus_value = value;
+					}
+				}
+			}
+        }
+    }
+
+    function newBonusCalculate(id,value,report_id,emp_count,emp_id){
+	    let new_bonus = 0;
+		let total_net = 0;
+		let crew_cost = 0;
+		let total_bonus = 0;		
+		let grand_total_bonus = 0;
+		let apply_bonus_status = 0;
+		
+        let employee_detail = report_json_data[emp_count].employee;
+		for(let rd = 0; rd < employee_detail.length; rd++){
+			let emp_payout_rate = employee_detail[rd].payout_rate;
+			let payout_data = employee_detail[rd].payout_break;
+			let total_bonus = 0;
+			for(let rbd = 0; rbd < payout_data.length; rbd++){
+				if(employee_detail[rd].employee_id == emp_id){
+                    if(payout_data[rbd].payout_break_id == id){
+                        if(payout_data[rbd].apply_bonus == 1)
+                        {
+                            if(payout_data[rbd].payout_type == 0){
+								if(payout_data[rbd].break_type == 0){
+									new_bonus = -emp_payout_rate * value * payout_data[rbd].bonus_rate;
+								} else if(payout_data[rbd].break_type == 1) {
+									new_bonus = emp_payout_rate * value * payout_data[rbd].bonus_rate;
+								}
+                            } else {
+								if(payout_data[rbd].break_type == 0){
+									new_bonus =  -value * payout_data[rbd].bonus_rate;
+								} else if(payout_data[rbd].break_type == 1) {
+									new_bonus =  value * payout_data[rbd].bonus_rate;
+								}
+                            }
+							payout_data[rbd].new_bonus_value = value;
+                        }
+						payout_data[rbd].break_amount = new_bonus;
+					}
+				}
+			}
+				
+			for(let rba = 0; rba < payout_data.length; rba++){
+				total_bonus += payout_data[rba].break_amount;
+			}
+				
+			total_net = total_bonus + employee_detail[rd].total_payout;				
+			crew_cost += total_net;
+			$('td[data-emp-report_id-type="'+employee_detail[rd].employee_id+''+employee_detail[rd].report_id+'total"]').html(total_bonus);
+			$('td[data-emp-report_id-type="'+employee_detail[rd].employee_id+''+employee_detail[rd].report_id+'net"]').html(total_net); 
+
+			employee_detail[rd].bonus_value = total_bonus; 
+			employee_detail[rd].total_net = total_net; 
+			grand_total_bonus += total_bonus;
+
+			if(total_bonus != 0){
+				apply_bonus_status = 1;
+			}else {
+				apply_bonus_status = 0;
+			}
+		}
+		
+		let grand_total = report_json_data[emp_count].revenue - crew_cost;
+			
+		if(grand_total > 0){
+			$('td[data-report_id-type="'+report_json_data[emp_count].report_id+'total_grand"]').attr('class', "approved");
+		} else {
+			$('td[data-report_id-type="'+report_json_data[emp_count].report_id+'total_grand"]').attr('class', "declined");
+		}
+		
+		// report_json_data[emp_count].crew_cost = crew_cost;
+		// report_json_data[emp_count].grand_total = report_json_data[emp_count].revenue - crew_cost;
+		report_json_data[emp_count].total_bonus = grand_total_bonus;
+		report_json_data[emp_count].apply_bonus_status = apply_bonus_status;
+
+		$('td[data-report_id-type="'+report_json_data[emp_count].report_id+'crew"]').html(crew_cost); 
+		$('td[data-report_id-type="'+report_json_data[emp_count].report_id+'total_grand"]').html(grand_total);
+    }
+	
+   
+
+	/********** Assign Captain **********/
+		
+	$('.assign_captain_name').keyup( function() {
+		let id = $(this).data('id');
+		
+		let assign_captain_result = $("#assign_captain_result"+id);
+		
+		$("#assign_crew_captain_id"+id).val('');
+				
+		if( this.value.length < 3 ){
+			assign_captain_result.removeClass("show");
+			return false;
+		}
+		
+		let captain_value = $(this).val();
+	
+	
+	$('body').on('click', '#customCheck', function() {
+		let filterReport = '';
+		let reportIds = [];
+		reportIds = filterReport.split(",");
+		
+		var getVal=$('#customCheck').is(":checked");
+		if(getVal)
+		{
+			reportIds.forEach(function (itemReport) {
+				report_approve = report_approve.filter(x => x !== (parseInt(itemReport)));
+				report_approve.push(parseInt(itemReport));
+				document.getElementById("customCheck"+itemReport).checked = true;
+			});
+		}else {
+			report_approve = [];
+			reportIds.forEach(function (itemReport) {
+				document.getElementById("customCheck"+itemReport).checked = false;
+			});
+		}
+		let length = report_approve.length;
+		$('.all_selected_count').html(zeroSpace(length,2));
+		if(length > 0)
+		{
+			$('.all_select_checkbox').show();
+		}else{
+			$('.all_select_checkbox').hide();
+		}
+	});
+	
+	$('body').on('click', '.select_captain', function() {
+			
+		let id = $(this).data("id");
+		let firstname = $(this).data("firstname");
+		let lastname = $(this).data("lastname");
+		let captain_id = $(this).data("captain");
+		
+		$("#assign_captain_result"+id).removeClass("show");
+		
+		$("#captain_id"+id).val(captain_id);
+		$("#assign_captain_name"+id).val(firstname+' '+lastname);
+		
+		$('#crew_data'+id).removeClass('d-none');
+		
+	
+	
+	//payout edit and update
+	function getPayout(x){
+		$('.saveIcon'+x).show();
+		$('.editIcon'+x).hide();
+		$('.emp_payout'+x).hide();
+	}
+	
+	//save
+	function updatePayout(x){
+		$('.editIcon'+x).show();
+		$('.saveIcon'+x).hide();
+		$('.emp_payout'+x).show();
+		let payout_rate = $('.update_payout_'+x).val();
+
+		if(payout_rate <= 0){
+			notes.show("Enter Valid Payout Rate.", {
+				type: 'danger',
+				title: 'No Report Selected',
+				icon: '<i class="icon-alert-triangle"></i>'
+			});
+			return false;
+		}
+
+		$.ajax({
+			type: "POST",
+			url: BASE_URL+"include/function.html",
+			data:{user_id:x,payout_rate:payout_rate,update_payout_rate:"update_payout_rate"},
+			cache: false,
+			dataType: "json",
+			success: function(html){
+				if(html.status == 'success') {
+					$.confirm({
+						icon: 'fa fa-smile-o',
+						autoClose: 'Close|2000',
+						buttons: {
+							Close:{
+								btnClass: 'btn-green',
+								action: function () {
+									window.location.reload();
+								}
+							}
+						},
+						title:'Success',
+						content:'Payout Rate Updated Successfully.',
+						theme: 'supervan',
+						animation: 'scale',
+						type: 'green',
+					});
+					// notes.show("Payout Rate Updated Successfully.", {
+					// 	type: 'success',
+					// 	icon: '<i class="icon-check"></i>'
+					// });
+			return false;
+				} else {
+					notes.show("Something Went Wrong.", {
+						type: 'danger',
+						title: 'Try Again',
+						icon: '<i class="icon-alert-triangle"></i>'
+					});
+				}
+			}
+		});
+	}
+
+	//get user deatil
+	function getUser(x){
+		$.ajax({
+			type: "POST",
+			url: BASE_URL+"include/function.html",
+			data:{user_id:x,user_detail:"user_detail"},
+			cache: false,
+			dataType: "json",
+			success: function(html){
+				$('#exampleModal').modal('toggle');
+				$('#user_id').val(x);
+				$('.emp_name').html(html.user.firstname+' '+html.user.lastname);
+				$('#firstname').val(html.user.firstname);
+				$('#lastname').val(html.user.lastname);
+				$('#cellnumber').val(html.user.mobile);
+				$('#email').val(html.user.email);
+				$('#address').val(html.user.address);
+				$('#city').val(html.user.city);
+				$('#state').val(html.user.state);
+				$('#zipcode').val(html.user.zipcode);
+				$('#payout').val(html.user.payout_rate);
+				if(html.user.l_status == 1){
+					$('#login_status').prop('checked', true); 
+				}else{
+					$('#login_status').prop('checked', false); 
+				}
+				if(html.user.worker == 1){
+					$('#worker').prop('checked', true); 
+				}else{
+					$('#worker').prop('checked', false); 
+				}
+				if(html.user.r_status == 1){
+					$('#r_status').prop('checked', true); 
+				}else{
+					$('#r_status').prop('checked', false); 
+				}
+				
+				$("#role").val(html.user.designation);
+				$('#role').selectpicker('val', html.user.designation);
+				$('#job_catch_all').val(html.user.job_catch_all);
+				$('#job_supervisor').val(html.user.job_supervisor);
+				$("#designation_type").val(html.designation.type);
+			}
+		});
+	}
+	
+	$('#assign_email').click(function(){
+		let firstname = $('#firstname').val();
+		let main_domain = '';
+		
+		let domain_split = location.hostname.split('.');
+		if(domain_split.length > 2){
+			main_domain = domain_split.slice(1).join('.');
+		} else {
+			main_domain = domain_split.join('.');
+		}
+		let email = 'no_email@'+main_domain;
+		$('#email').val(email);
+    });
+
+	$('#update_user').click(function(){
+
+		let user_id = $('#user_id').val();
+		let designation_type = $('#designation_type').val();
+		let role = $('#role').val();
+		let firstname = $('#firstname').val();
+		let lastname = $('#lastname').val();
+		let cellnumber = $('#cellnumber').val();
+		let email = $('#email').val();
+		let address = $('#address').val();
+		let city = $('#city').val();
+		let state = $('#state').val();
+		let zipcode = $('#zipcode').val();
+		let payout = $('#payout').val();
+		let worker = $('#worker').prop('checked');
+		let r_status = $('#r_status').prop('checked');
+		let job_supervisor = $('#job_supervisor').val();
+		let job_catch_all = $('#job_catch_all').val();
+		let edit_user = 'edit_emp';
+
+		worker_val = 0;
+		r_status_val = 0;
+		job_supervisor_val = 0;
+		job_catch_all_val = 0;
+
+		if (worker == true) {
+			worker_val = 1;
+		}
+
+		if (r_status == true) {
+			r_status_val = 1;
+		}
+
+		if (job_supervisor == 1) {
+			job_supervisor_val = 1;
+		}
+
+		if (job_catch_all == 1) {
+			job_catch_all_val = 1;
+		}
+
+		let data_mail = $(this).data('mail');
+
+		$('.form-control').removeClass('border-danger');
+
+		if(role ==''){
+			notes.show("Role is Required.", {
+				type: 'danger',
+				title: 'Alert',
+				icon: '<i class="icon-alert-triangle"></i>'
+			});
+		} else if(firstname ==''){
+			$('#firstname').addClass('border-danger');
+			notes.show("First Name is Required.", {
+				type: 'danger',
+				title: 'Alert',
+				icon: '<i class="icon-alert-triangle"></i>'
+			});
+		} else if(lastname ==''){
+			$('#lastname').addClass('border-danger');
+			notes.show("Last Name is Required.", {
+				type: 'danger',
+				title: 'Alert',
+				icon: '<i class="icon-alert-triangle"></i>'
+			});
+		} else if(cellnumber ==''){
+			$('#cellnumber').addClass('border-danger');
+			notes.show("Cellnumber is Required.", {
+				type: 'danger',
+				title: 'Alert',
+				icon: '<i class="icon-alert-triangle"></i>'
+			});
+		} else if(cellnumber.length != 10) {
+			$('#cellnumber').addClass('border-danger');
+			notes.show("10 Digit Cellnumber is Required.", {
+				type: 'danger',
+				title: 'Alert',
+				icon: '<i class="icon-alert-triangle"></i>'
+			});
+		} else if(email ==''){
+			$('#email').addClass('border-danger');
+			notes.show("Email is Required.", {
+				type: 'danger',
+				title: 'Alert',
+				icon: '<i class="icon-alert-triangle"></i>'
+			});
+		} else if(payout ==''){
+			$('#payout').addClass('border-danger');
+			notes.show("Payout is Required.", {
+				type: 'danger',
+				title: 'Alert',
+				icon: '<i class="icon-alert-triangle"></i>'
+			});
+		} else {
+			
+	});
+
+	// decline_report
+	function decline_report(x){
+		$('#decline_report_id').val(x);
+		$('#declineModal').modal('toggle');
+	}
+
+	//add decline reson
+	function addReason(){
+		let report_id = $('#decline_report_id').val();
+		let decline_reason = $('#decline_reason').val();
+
+</script>
+<script type="text/javascript">
+	window.onload = function() {
+		
+		let col_height = $('.col-height').height();
+		$('.hours-detail td, .hours-detail th, .hours-detail td select, .hours-detail th select, .hours-detail label').css('font-size', '0.8rem');
+		
+		$(".product-details").height((col_height * 3) - 11.6 +'px');
+		
+		$(".total-col").height((col_height  * 7) - 0.4 +'px');
+		
+	};
+	
+	$(document).ready(function(){
+		$(".increaseFont,.decreaseFont,.resetFont").click(function(){
+			var type= $(this).val();
+			var lblFontSize = $('.hours-detail label').css('font-size');
+			var checkbox = $('.checkbox ~ label');
+			// console.log(checkbox);
+			if(type=='increase'){
+				$('.hours-detail td, .hours-detail th, .hours-detail td select, .hours-detail th select, .hours-detail label').css('font-size', parseFloat(lblFontSize)+parseFloat(0.2));
+				// checkbox.style.width = (checkbox.offsetWidth + 1) + 'px'; // Increase width
+				// checkbox.style.height = (checkbox.offsetHeight + 1) + 'px'; // Increase height
+				document.querySelector(".product-details").style.height =(($('.col-height').height() + 11.6)*2+2) +'px';
+				document.querySelector(".total-col").style.height = ($('.col-height').height() + 11.6)*5 +'px';
+			} else if(type=='reset'){
+				$('.hours-detail td, .hours-detail th, .hours-detail td select, .hours-detail th select, .hours-detail label').css('font-size', '0.8rem');
+				// checkbox.style.width = '12px';
+				// checkbox.style.height = '12px';
+				document.querySelector(".product-details").style.height = ($('.col-height').height() + 11.6)*2 +'px';
+				document.querySelector(".total-col").style.height = ($('.col-height').height() + 11.6)*5 +'px';
+  
+			} else {
+				$('.hours-detail td, .hours-detail th, .hours-detail td select, .hours-detail th select, .hours-detail label').css('font-size', parseFloat(lblFontSize)-parseFloat(0.2));
+				// checkbox.style.width = (checkbox.offsetWidth - 1) + 'px'; // Increase width
+				// checkbox.style.height = (checkbox.offsetHeight - 1) + 'px'; // Increase height
+				document.querySelector(".product-details").style.height =(($('.col-height').height() + 11.6)*2-2) +'px';
+				document.querySelector(".total-col").style.height = ($('.col-height').height() + 11.6)*5 +'px';
+			}
+      });
+  });
+</script>

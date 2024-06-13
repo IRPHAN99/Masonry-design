@@ -1,0 +1,1099 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1">
+
+		<!-- Meta -->
+		<meta name="description" content="Manage Your Reporting Hours In one Place.">
+		<meta name="author" content="Uday Bhan">
+		<link rel="shortcut icon" href="https://localhost/masonry/assets/localhost/img/header-logo_1684236971.png" />
+		<!--<link rel="apple-touch-icon" href="https://localhost/masonry/assets/localhost/img/header-logo_1684236971.png"/>-->
+		<link rel="apple-touch-icon" href="https://placehold.jp/150x150.png?text=%20&css=%7B%22background%22%3A%22%20url(%27https://localhost/masonry/assets/localhost/img/header-logo_1684236971.png%27)%20center%20center%20%23ffffff%20no-repeat%22%2C%22background-size%22%3A%22%20120px%22%7D"/>
+
+		<!-- Title -->
+		<title>Masonry Group Inc - Manage Your Reporting Hours In one Place.</title>
+
+		<!-- ************* Common Css Files ************ -->
+		<style>
+			:root {
+				--brand-color: #791116;
+			}
+		</style>
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://localhost/masonry/css/bootstrap.min.css" />
+		<!-- Icomoon Font Icons css -->
+		<link rel="stylesheet" href="https://localhost/masonry/fonts/style.css" />
+		<!-- Jquery Confirm CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css" />
+		<!-- DateRange css -->
+		<link rel="stylesheet" href="https://localhost/masonry/vendor/daterange/daterange.css" />
+		<!-- Datepicker css -->
+		<link rel="stylesheet" href="https://localhost/masonry/vendor/datepicker/css/classic.css" />
+		<link rel="stylesheet" href="https://localhost/masonry/vendor/datepicker/css/classic.date.css" />	
+		<link rel="stylesheet" href="https://localhost/masonry/vendor/datepicker/css/classic.time.css" />	
+		<!-- Lobipanel css -->
+		<link rel="stylesheet" href="https://localhost/masonry/vendor/lobipanel/css/lobipanel.css" />
+		<!-- BS Selectpicker CSS -->
+		<link rel="stylesheet" href="https://localhost/masonry/vendor/bs-select/bs-select.css" />
+		<!-- Notify -->
+		<link rel="stylesheet" href="https://localhost/masonry/vendor/notify/notify-flat.css">
+		<!-- Rangeslider CSS -->
+		<link rel="stylesheet" href="https://localhost/masonry/vendor/range-slider/ion.rangeSlider.css">
+		<!-- Summernote CSS -->
+		<link rel="stylesheet" href="https://localhost/masonry/vendor/summernote/summernote-bs4.css" />
+		<!-- Main CSS -->
+		<link rel="stylesheet" href="https://localhost/masonry/css/main.css" />
+		
+		<link rel="stylesheet" href="https://localhost/masonry/css/custom.css" />
+		</head>
+
+    <body>
+        <!-- Loading starts -->
+<!--<div id="loading-wrapper">
+    <div class="spinner-border" role="status"> <span class="sr-only">Loading...</span> </div>
+</div>-->
+<div class="preloader">
+	<img src="https://localhost/masonry/assets/localhost/img/header-logo_1684235586.png" alt="Masonry Group Inc"/>
+</div>
+<style type="text/css">
+	/**** Preloader CSS ****/
+	.preloader {
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: var(--brand-color);
+		z-index: 9800;
+		transition: all 1s ease;
+		transform: rotate(0deg) scale(1);
+	}
+	.preloader img {
+		position: absolute;
+		filter: contrast(0) brightness(100);
+		width: auto;
+		height: 100px;
+		animation-name: rotator;
+		animation-duration: 2s;
+		animation-iteration-count: infinite;
+	}
+	@keyframes rotator {
+		0%, 100% {
+			transform: scale(1);
+		}
+		50% {
+			transform: scale(1.5);
+		}
+	}
+</style>
+<!-- Page wrapper start -->
+<div class="page-wrapper">
+		<!-- Sidebar wrapper start -->
+	<nav id="sidebar" class="sidebar-wrapper">
+		
+		<!-- Sidebar brand start  -->
+		<div class="sidebar-brand">
+			<a href="index.html" class="logo">
+				<img src="https://localhost/masonry/assets/localhost/img/header-logo_1684236971.png" class="pinned-logo" alt="Masonry Group Inc" />
+				<img src="https://localhost/masonry/assets/localhost/img/header-logo_1684235586.png" class="normal-logo" alt="Masonry Group Inc" />
+			</a>
+		</div>
+		<!-- Sidebar brand end  -->
+
+		<!-- Sidebar content start -->
+		<div class="sidebar-content">
+
+			<!-- sidebar menu start -->
+			<div class="sidebar-menu">
+				<ul>
+										<li class="header-menu">General</li>
+					
+										<li class="">
+						<a href="index.html" class=""> <i class="icon-layout"></i> <span class="menu-text">Dashboard</span></a>
+					</li>
+					<li class="header-menu">Clients</li>
+					<li class="sidebar-dropdown ">
+	                    <a href="javascript:void(0);" class=""><i class="icon-portrait"></i><span class="menu-text">Clients</span></a>
+	                    <div class="sidebar-submenu">
+	                        <ul>
+								<li class="">
+									<a href="filemanager.html" class="">Clients</a>
+								</li>
+								<!-- <li class="">
+									<a href="clients.html" class="">Clients</a>
+								</li> -->
+								<li class="">
+									<a href="contacts.html" class="">Contacts</a>
+								</li>
+								<!-- <li class="">
+									<a href="projects2.html" class="">Projects Old</a>
+								</li> -->
+								<li class="">
+									<a href="projects.html" class="">Projects </a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<!--<li class="">
+						<a href="clients.html" class=""> <i class="icon-portrait"></i> <span class="menu-text">Clients</span></a>
+					</li>
+					<li class="">
+						<a href="contacts.html" class=""> <i class="icon-recent_actors"></i> <span class="menu-text">Contacts</span></a>
+					</li>
+					<li class="">
+						<a href="projects.html" class=""> <i class="icon-book-open"></i> <span class="menu-text">Projects</span></a>
+					</li>-->
+					<li class="header-menu">Work</li>
+					<li class="">
+						<a href="jobs.html" class=""><i class="icon-inbox"></i><span class="menu-text">Jobs / Lots</span></a>
+					</li>
+					<li class="">
+						<a href="tasks.html" class=""><i class="icon-clipboard"></i><span class="menu-text">Tasks</span></a>
+					</li>
+					<li class="">
+						<a href="items.html" class=""><i class="icon-layers2"></i><span class="menu-text">Items</span></a>
+					</li>
+					<li class="">
+						<a href="work-type.html" class=""><i class="icon-layout"></i><span class="menu-text">Work Type</span></a>
+					</li>
+					<!--<li class="">
+						<a href="jobs.html?type=Vehicle" class=""><i class="icon-airport_shuttle"></i><span class="menu-text">Vehicle Jobs</span></a>
+					</li>-->
+<!--
+	                <li class="sidebar-dropdown ">
+	                    <a href="javascript:void(0);" class=""><i class="icon-inbox"></i><span class="menu-text">Jobs / Tasks</span></a>
+	                    <div class="sidebar-submenu">
+	                        <ul>
+								<li class="">
+									<a href="jobs.html" class="">Jobs / Tasks</a>
+								</li>
+								<li class="">
+									<a href="items.html" class="">Items</a>
+								</li>
+								<li class="">
+									<a href="work-type.html" class="">Work Type</a>
+								</li>
+								<li class="">
+									<a href="jobs.html?type=Vehicle" class="">Vehicle Jobs</a>
+								</li>
+	                        </ul>
+	                    </div>
+	                </li>-->
+										<li class="header-menu">Reports</li>
+										<!--<li class="">
+						<a href="reports.html" class=""><i class="icon-file-text"></i> <span class="menu-text">All Reports</span></a>
+					</li>-->
+										<!--<li class="">
+						<a href="reports.html?type=Pending" class=""><i class="icon-file"></i> <span class="menu-text">Pending Reports</span></a>
+					</li>
+					<li class="">
+						<a href="reports.html?type=Approved" class=""><i class="icon-file-plus"></i> <span class="menu-text">Approved Reports</span></a>
+					</li>
+					<li class="">
+						<a href="reports.html?type=Declined" class=""><i class="icon-file-minus"></i> <span class="menu-text">Declined Reports</span></a>
+					</li>-->
+	                <li class="sidebar-dropdown ">
+	                    <a href="javascript:void(0);" class=""><i class="icon-file-text"></i><span class="menu-text">Reports</span></a>
+	                    <div class="sidebar-submenu">
+	                        <ul>
+									                            <li class="">
+	                                <a href="reports.html" class="">Reports</a>
+	                            </li>
+								<li class="">
+	                                <a href="task-report.html" class="">Employee Reports</a>
+	                            </li>
+																
+	                            <li class="">
+	                                <a href="reports.html?type=Pending" class="">Pending Reports</a>
+	                            </li>
+	                            <li class="">
+	                                <a href="reports.html?type=Approved" class="">Approved Reports</a>
+	                            </li>
+	                            <li class="">
+	                                <a href="reports.html?type=Declined" class="">Declined Reports</a>
+	                            </li>
+																<li class="">
+									<a href="payout-report.html" class="">Payout Reports</a>
+								</li>
+								<li class="">
+									<a href="payout-report2.html" class="">Payout Report Old</a>
+								</li>
+									                        </ul>
+	                    </div>
+	                </li>
+										<li class="header-menu">Company</li>
+					<li class="">
+						<a href="employees.html" class=""> <i class="icon-users"></i> <span class="menu-text">Employees</span></a>
+					</li>
+					
+					
+					<li class="sidebar-dropdown ">
+						<a href="javascript:void(0);" class=""><i class="icon-user1"></i><span class="menu-text">Users</span></a>
+						<div class="sidebar-submenu">
+							<ul>
+								<li class="">
+									<a href="users.html" class="">Users</a>
+								</li>
+								<li class="">
+									<a href="users.html?type=pending" class="">Pending Users</a>
+								</li>
+								<!--<li class="">
+									<a href="users.html?type=archived" class="">Archived Users</a>
+								</li>-->
+								<li class="">
+									<a href="manage-breaks.html" class="">User Payout Breaks</a>
+								</li>
+								
+								<!--<li class="">
+									<a href="users.html" class="">Users</a>
+								</li>
+								<li class="">
+									<a href="users.html?type=pending" class="">Pending Users</a>
+								</li>
+								<li class="">
+									<a href="users.html?type=archived" class="">Archived Users</a>
+								</li>-->
+							</ul>
+						</div>
+					</li>
+					
+					<!--<li class="">
+						<a href="users.html" class=""> <i class="icon-user-check"></i> <span class="menu-text">Users</span></a>
+					</li>
+					<li class="">
+						<a href="users.html?type=pending" class=""> <i class="icon-user-plus"></i> <span class="menu-text">Pending Users</span></a>
+					</li>
+					<li class="">
+						<a href="users.html?type=archived" class=""> <i class="icon-user-x"></i> <span class="menu-text">Archived Users</span></a>
+					</li>-->
+					<li class="">
+						<a href="crew.html" class=""> <i class="icon-users"></i> <span class="menu-text">Crew </span></a>
+					</li>
+					<li class="">
+						<a href="crew2.html" class=""> <i class="icon-users"></i> <span class="menu-text">Crew Old</span></a>
+					</li>
+					
+					<!--<li class="">
+						<a href="manage-breaks.html" class=""> <i class="icon-gift"></i> <span class="menu-text">User Payout Breaks</span></a>
+					</li>-->
+					<li class="active active-page-link">
+						<a href="roles.html" class="current-page"> <i class="icon-award"></i> <span class="menu-text">Roles & Permissions</span></a>
+					</li>
+					<!--<li class="">
+						<a href="vehicles.html" class=""> <i class="icon-truck"></i> <span class="menu-text">Vehicles</span></a>
+					</li>
+					<li class="">
+						<a href="work-address.html" class=""> <i class="icon-map-pin"></i> <span class="menu-text">Work Address</span></a>
+					</li>
+					<li class="header-menu">Reports</li>
+					<li class="">
+						<a href="payout-report.html" class=""> <i class="icon-user1"></i> <span class="menu-text">Payout Report</span></a>
+					</li>
+					<li class="">
+						<a href="users-report.html" class=""> <i class="icon-user1"></i> <span class="menu-text">User's Report</span></a>
+					</li>
+					<li class="">
+						<a href="jobs-report.html" class=""> <i class="icon-user1"></i> <span class="menu-text">Job's Report</span></a>
+					</li>
+-->
+					<li class="header-menu">Settings</li>
+					<li class="sidebar-dropdown ">
+						<a href="javascript:void(0);" class=""><i class="icon-settings1"></i><span class="menu-text">Settings</span></a>
+						<div class="sidebar-submenu">
+							<ul>
+								<li class="">
+									<a href="general-settings.html" class="">General Settings</a>
+								</li>
+								<li class="">
+									<a href="task-settings.html" class="">Task Settings</a>
+								</li>
+								<li class="">
+									<a href="payout-settings.html" class="">Payout Settings</a>
+								</li>
+								<li class="">
+									<a href="custom-fields.html" class="">Custom Fields</a>
+								</li>
+								<li class="">
+									<a href="report-settings.html" class="">Report Settings</a>
+								</li>
+								<li class="">
+									<a href="break-settings.html" class="">Break Settings</a>
+								</li>
+								<li class="">
+									<a href="category-settings.html" class="">Category Settings</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+										<li class="header-menu">Extra</li>
+<!--
+					<li class="">
+						<a href="documents.html" class=""> <i class="icon-documents"></i> <span class="menu-text">File Manager</span></a>
+					</li>
+					<li class="">
+						<a href="support.html" class=""> <i class="icon-headset"></i> <span class="menu-text">Support</span></a>
+					</li>
+-->
+										<li class="sidebar-dropdown ">
+						<a href="javascript:void(0);"><i class="icon-archive1"></i><span class="menu-text">Archived</span></a>
+						<div class="sidebar-submenu">
+							<ul>
+								<li class="">
+									<a href="archived-users.html" class="">Archived Users</a>
+								</li>
+								<li class="">
+									<a href="archived-employees.html" class="">Archived Employees</a>
+								</li>
+								<li class="">
+									<a href="archived-reports.html" class="">Archived Reports</a>
+								</li>
+								<li class="">
+									<a href="archived-jobs.html" class="">Archived Jobs</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+										<li>
+						<a href="https://localhost/masonry/logout.html"> <i class="icon-log-out text-danger"></i> <span class="menu-text text-danger">Logout</span></a>
+					</li>
+									</ul>
+			</div>
+			<!-- sidebar menu end -->
+
+		</div>
+		<!-- Sidebar content end -->
+		
+	</nav>
+	<!-- Sidebar wrapper end -->
+	
+	<!-- Modal -->
+	<div class="modal fade" id="addCompany" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Add Company</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="form-group">
+						<input type="hidden" id="join_company_user_mobile" value="9931063845"/>
+						<label for="join_company_id">Select Company</label>
+						<select class="form-control selectpicker" id="join_company_id" data-live-search="true" title="Select Company">
+							select * from `company` where `id` NOT IN (1);						</select>
+					</div>
+				</div>
+				<div class="modal-footer custom">
+					<div class="left-side">
+						<button type="button" class="btn btn-link danger btn-block" data-dismiss="modal">Cancel</button>
+					</div>
+					<div class="divider"></div>
+					<div class="right-side">
+						<a id="join_company" href="javascript:void(0);" class="btn btn-link success btn-block">Add Company</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+        <!-- Page content start  -->
+        <div class="page-content">
+            
+            <!-- Header start -->
+<header class="header">
+	<div class="toggle-btns">
+		<a id="toggle-sidebar" href="#">
+			<i class="icon-list"></i>
+		</a>
+		<a id="pin-sidebar" href="#">
+			<i class="icon-list"></i>
+		</a>
+	</div>
+	<div class="header-items">
+		<!-- Header actions start -->
+		<ul class="header-actions">
+						<li class="mr-2">
+				<a href="javascript:void(0);"><i class="icon-bell"></i></a>
+			</li>
+			<li class="dropdown">
+				<a href="#" id="userSettings" class="user-settings" data-toggle="dropdown" aria-haspopup="true">
+					<!--<span class="user-name">Irphan Ahmad</span>-->
+					<span class="avatar">
+						<img src="https://localhost/masonry/assets/localhost/img/IMG20230125093748_1709488808_1710753992.jpg" alt="Irphan Ahmad">
+					</span>
+				</a>
+				<div class="dropdown-menu dropdown-menu-right" aria-labelledby="userSettings">
+					<div class="header-profile-actions">
+						<div class="header-user-profile">
+							<!--<div class="header-user">
+								<img src="https://localhost/masonry/IMG20230125093748_1709488808_1710753992.jpg" alt="Irphan Ahmad">
+							</div>-->
+							<h5>Irphan Ahmad</h5>
+							<p>Admin</p>
+						</div>
+													<a href="https://localhost/masonry/dashboard.html"><i class="icon-refresh-cw"></i> User Dashboard</a>
+												<a href="profile.html"><i class="icon-user1"></i> My Profile</a>
+						<a href="https://localhost/masonry/logout.html"><i class="icon-log-out1"></i> Sign Out</a>
+					</div>
+				</div>
+			</li>
+		</ul>						
+		<!-- Header actions end -->
+	</div>
+</header>
+<!-- Header end -->
+
+<div id="notes" class="notify notify-notes"></div>
+
+
+            <!-- Page header start -->
+            <div class="page-header">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">Roles</li>
+                </ol>
+                                <ul class="app-actions">
+                    <li>
+                        <span class="btn btn-primary" data-toggle="modal" data-target="#add_designation_modal">
+                            <i class="icon-plus-circle"></i> Create New
+                        </span>
+                    </li>
+                </ul>
+                            </div>
+            <!-- Page header end -->
+
+            <!-- Main container start -->
+            <div class="main-container">
+                                <!-- Row start -->
+                <div class="row gutters">
+                                        <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12">
+                        <div class="report-details">
+                            <div class="work-info">
+                                <p>
+                                    <span class="text-avatar sm">Br</span>
+                                    <span>
+                                        <label>Bricklayer</label>
+										<span class="badge badge-pill badge-dark">user</span>
+                                        <span class="small block">Tuesday 15th August, 2023</span>
+                                    </span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Andriy Yashchenko</span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Oleksandr Fomichov</span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Vadym Berezhanskyy</span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Stanislav Melesh</span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Bohdan Bohonosyk</span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Vitalii Fedoryshyn </span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Pavlo Pereiaslavets</span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Oleh Sklianovskyi</span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Yura Chepil</span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Vasyl Pifihurniy</span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Mykhailo Moroz</span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Ivan Bezukhanych</span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Volodymyr Tsyperdiuk</span>
+                                </p>
+								                            </div>
+                            <div class="view-section">
+                                <div class="custom-control custom-switch mb-5">
+                                    <input type="checkbox" onclick="update_designation(2,1)" class="custom-control-input" checked id="designation_type2">
+                                    <label class="custom-control-label" for="designation_type2"></label>
+                                </div>
+                                <span>
+                                    <a href="roles.html?edit=2" class="mr-2"><span><i class="icon-edit1"></i></span></a>
+                                    <a href="javascript:void(0);" onclick="del_designation(2)"><span><i class="icon-trash-2"></i></span></a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12">
+                        <div class="report-details">
+                            <div class="work-info">
+                                <p>
+                                    <span class="text-avatar sm">Fo</span>
+                                    <span>
+                                        <label>Foreman</label>
+										<span class="badge badge-pill badge-dark">user</span>
+                                        <span class="small block">Tuesday 12th September, 2023</span>
+                                    </span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Taras Rizhok</span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Volodymyr Romaniv</span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Ruslan Demianiv</span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Ivan Laba</span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Ivan Naumenko</span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Andriy Chepil</span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Mykola Rybak</span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Ivan Melesh</span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Andriy Malets</span>
+                                </p>
+								                            </div>
+                            <div class="view-section">
+                                <div class="custom-control custom-switch mb-5">
+                                    <input type="checkbox" onclick="update_designation(3,1)" class="custom-control-input" checked id="designation_type3">
+                                    <label class="custom-control-label" for="designation_type3"></label>
+                                </div>
+                                <span>
+                                    <a href="roles.html?edit=3" class="mr-2"><span><i class="icon-edit1"></i></span></a>
+                                    <a href="javascript:void(0);" onclick="del_designation(3)"><span><i class="icon-trash-2"></i></span></a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12">
+                        <div class="report-details">
+                            <div class="work-info">
+                                <p>
+                                    <span class="text-avatar sm">La</span>
+                                    <span>
+                                        <label>Labour</label>
+										<span class="badge badge-pill badge-dark">user</span>
+                                        <span class="small block">Tuesday 12th September, 2023</span>
+                                    </span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Bohdan Bryhadyr </span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Volodymyr Stetsiv </span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Ivan Hryhirchuk</span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Yaroslav Lozinskyi </span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Oleg Kornaliuk</span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Maksym Melnik</span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Dima Havei</span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Ihor Mykytyn</span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Volodymyr Shram</span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Yaroslav Huzieiev</span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Yevhenii Melnyk</span>
+                                </p>
+								                            </div>
+                            <div class="view-section">
+                                <div class="custom-control custom-switch mb-5">
+                                    <input type="checkbox" onclick="update_designation(4,1)" class="custom-control-input" checked id="designation_type4">
+                                    <label class="custom-control-label" for="designation_type4"></label>
+                                </div>
+                                <span>
+                                    <a href="roles.html?edit=4" class="mr-2"><span><i class="icon-edit1"></i></span></a>
+                                    <a href="javascript:void(0);" onclick="del_designation(4)"><span><i class="icon-trash-2"></i></span></a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12">
+                        <div class="report-details">
+                            <div class="work-info">
+                                <p>
+                                    <span class="text-avatar sm">Fo</span>
+                                    <span>
+                                        <label>Forklift Operator</label>
+										<span class="badge badge-pill badge-dark">user</span>
+                                        <span class="small block">Tuesday 12th September, 2023</span>
+                                    </span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Serhiy Fedorovich</span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Grigoriy Filiakovsky</span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Mykola Protetskyi </span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Yaroslav Melnik</span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Volodymyr Darmohrai </span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Oleg Zahnybroda</span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Ivan Hotsak</span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Dmytro Bilusiak</span>
+                                </p>
+								                            </div>
+                            <div class="view-section">
+                                <div class="custom-control custom-switch mb-5">
+                                    <input type="checkbox" onclick="update_designation(5,1)" class="custom-control-input" checked id="designation_type5">
+                                    <label class="custom-control-label" for="designation_type5"></label>
+                                </div>
+                                <span>
+                                    <a href="roles.html?edit=5" class="mr-2"><span><i class="icon-edit1"></i></span></a>
+                                    <a href="javascript:void(0);" onclick="del_designation(5)"><span><i class="icon-trash-2"></i></span></a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12">
+                        <div class="report-details">
+                            <div class="work-info">
+                                <p>
+                                    <span class="text-avatar sm">Br</span>
+                                    <span>
+                                        <label>Bricklayer Apprentice</label>
+										<span class="badge badge-pill badge-dark">user</span>
+                                        <span class="small block">Tuesday 12th September, 2023</span>
+                                    </span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Pavlo Chavs </span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Oleksandr Savchuk</span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Nazar Rubel </span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Eduard Hradovych</span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Andriy Shymkiv </span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Volodymyr Skyba</span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Mykola Onuk</span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Mykhailo Khomyn</span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Andrii Potomkin</span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Vasyl Shalapai</span>
+                                </p>
+								                            </div>
+                            <div class="view-section">
+                                <div class="custom-control custom-switch mb-5">
+                                    <input type="checkbox" onclick="update_designation(6,1)" class="custom-control-input" checked id="designation_type6">
+                                    <label class="custom-control-label" for="designation_type6"></label>
+                                </div>
+                                <span>
+                                    <a href="roles.html?edit=6" class="mr-2"><span><i class="icon-edit1"></i></span></a>
+                                    <a href="javascript:void(0);" onclick="del_designation(6)"><span><i class="icon-trash-2"></i></span></a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12">
+                        <div class="report-details">
+                            <div class="work-info">
+                                <p>
+                                    <span class="text-avatar sm">Fo</span>
+                                    <span>
+                                        <label>Forklift Apprentice</label>
+										<span class="badge badge-pill badge-dark">user</span>
+                                        <span class="small block">Tuesday 12th September, 2023</span>
+                                    </span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Andriy Slobodian</span>
+                                </p>
+								                            </div>
+                            <div class="view-section">
+                                <div class="custom-control custom-switch mb-5">
+                                    <input type="checkbox" onclick="update_designation(7,1)" class="custom-control-input" checked id="designation_type7">
+                                    <label class="custom-control-label" for="designation_type7"></label>
+                                </div>
+                                <span>
+                                    <a href="roles.html?edit=7" class="mr-2"><span><i class="icon-edit1"></i></span></a>
+                                    <a href="javascript:void(0);" onclick="del_designation(7)"><span><i class="icon-trash-2"></i></span></a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12">
+                        <div class="report-details">
+                            <div class="work-info">
+                                <p>
+                                    <span class="text-avatar sm">Su</span>
+                                    <span>
+                                        <label>Supervisor</label>
+										<span class="badge badge-pill badge-dark">user</span>
+                                        <span class="small block">Thursday 14th September, 2023</span>
+                                    </span>
+                                </p>
+								                                <p>
+                                    <i class="icon-user1"></i>
+                                    <span>Volodymyr Tovstohanov</span>
+                                </p>
+								                            </div>
+                            <div class="view-section">
+                                <div class="custom-control custom-switch mb-5">
+                                    <input type="checkbox" onclick="update_designation(9,1)" class="custom-control-input" checked id="designation_type9">
+                                    <label class="custom-control-label" for="designation_type9"></label>
+                                </div>
+                                <span>
+                                    <a href="roles.html?edit=9" class="mr-2"><span><i class="icon-edit1"></i></span></a>
+                                    <a href="javascript:void(0);" onclick="del_designation(9)"><span><i class="icon-trash-2"></i></span></a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                                    </div>
+            <!-- Row end -->
+                        </div>
+            <!-- Main container end -->
+
+                        <!-- Modal -->
+            <div class="modal fade" id="add_designation_modal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Add New Role</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <input type="hidden" id="user_id" value="2">
+                            <div class="form-group">
+                                <label for="designation">Role</label>
+                                <input type="text" class="form-control" id="designation" placeholder="Enter Role">
+                            </div>
+                            <div class="form-group">
+                                <label for="designation_type">Role Type</label>
+                                <select class="form-control" id="designation_type" placeholder="Choose Designation Type">
+									<option value="user">User</option>
+									<option value="company">Company</option>
+								</select>
+                            </div>
+                            <div class="form-group">
+                                <label for="permission_checkbox">Permission</label>
+                                <table class="table table-striped table-bordered" id="permission_checkbox">
+                                    <tbody>
+                                                                                    <tr>
+                                                <td id="GeneralJobs">
+                                                    <label class="text-primary permission_title">General Jobs</label>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="ViewGeneralJobsOwn" data-view-own>
+                                                        <label class="custom-control-label" for="ViewGeneralJobsOwn">View (Own)</label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="ViewGeneralJobsGlobal" data-view-global>
+                                                        <label class="custom-control-label" for="ViewGeneralJobsGlobal">View (Global)</label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="CreateGeneralJobs">
+                                                        <label class="custom-control-label" for="CreateGeneralJobs">Create</label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="EditGeneralJobs">
+                                                        <label class="custom-control-label" for="EditGeneralJobs">Edit</label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="DeleteGeneralJobs">
+                                                        <label class="custom-control-label" for="DeleteGeneralJobs">Delete</label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <td id="Reports">
+                                                    <label class="text-primary permission_title">Reports</label>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="ViewReportsOwn" data-view-own>
+                                                        <label class="custom-control-label" for="ViewReportsOwn">View (Own)</label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="ViewReportsGlobal" data-view-global>
+                                                        <label class="custom-control-label" for="ViewReportsGlobal">View (Global)</label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="CreateReports">
+                                                        <label class="custom-control-label" for="CreateReports">Create</label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="EditReports">
+                                                        <label class="custom-control-label" for="EditReports">Edit</label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="DeleteReports">
+                                                        <label class="custom-control-label" for="DeleteReports">Delete</label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <td id="Employees">
+                                                    <label class="text-primary permission_title">Employees</label>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="ViewEmployeesOwn" data-view-own>
+                                                        <label class="custom-control-label" for="ViewEmployeesOwn">View (Own)</label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="ViewEmployeesGlobal" data-view-global>
+                                                        <label class="custom-control-label" for="ViewEmployeesGlobal">View (Global)</label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="CreateEmployees">
+                                                        <label class="custom-control-label" for="CreateEmployees">Create</label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="EditEmployees">
+                                                        <label class="custom-control-label" for="EditEmployees">Edit</label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="DeleteEmployees">
+                                                        <label class="custom-control-label" for="DeleteEmployees">Delete</label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <td id="Roles">
+                                                    <label class="text-primary permission_title">Roles</label>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="ViewRolesOwn" data-view-own>
+                                                        <label class="custom-control-label" for="ViewRolesOwn">View (Own)</label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="ViewRolesGlobal" data-view-global>
+                                                        <label class="custom-control-label" for="ViewRolesGlobal">View (Global)</label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="CreateRoles">
+                                                        <label class="custom-control-label" for="CreateRoles">Create</label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="EditRoles">
+                                                        <label class="custom-control-label" for="EditRoles">Edit</label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="DeleteRoles">
+                                                        <label class="custom-control-label" for="DeleteRoles">Delete</label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <td id="Users">
+                                                    <label class="text-primary permission_title">Users</label>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="ViewUsersOwn" data-view-own>
+                                                        <label class="custom-control-label" for="ViewUsersOwn">View (Own)</label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="ViewUsersGlobal" data-view-global>
+                                                        <label class="custom-control-label" for="ViewUsersGlobal">View (Global)</label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="CreateUsers">
+                                                        <label class="custom-control-label" for="CreateUsers">Create</label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="EditUsers">
+                                                        <label class="custom-control-label" for="EditUsers">Edit</label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="DeleteUsers">
+                                                        <label class="custom-control-label" for="DeleteUsers">Delete</label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                                                            </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="modal-footer custom">
+                            <div class="left-side">
+                                <button type="button" class="btn btn-link danger btn-block" data-dismiss="modal">Cancel</button>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="right-side">
+                                <a id="add_designation" href="javascript:void(0);" class="btn btn-link success btn-block">Add Role</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal end -->
+                    </div>
+        <!-- Page content end -->
+
+    </div>
+    <!-- Page wrapper end -->
+
+<script>var BASE_URL = 'https://localhost/masonry/'</script>
+		<!-- Required jQuery first, then Bootstrap Bundle JS -->
+		<script src="https://localhost/masonry/js/jquery.min.js"></script>
+		<script src="https://localhost/masonry/js/jquery-ui.min.js"></script>
+		<script src="https://localhost/masonry/js/bootstrap.bundle.min.js"></script>
+		<script src="https://localhost/masonry/js/moment.js"></script>
+		<!-- Slimscroll JS -->
+		<script src="https://localhost/masonry/vendor/slimscroll/slimscroll.min.js"></script>
+		<script src="https://localhost/masonry/vendor/slimscroll/custom-scrollbar.js"></script>
+		<!-- Daterange -->
+		<script src="https://localhost/masonry/vendor/daterange/daterange.js"></script>
+
+		<!-- Datepickers -->
+		<script src="https://localhost/masonry/vendor/datepicker/js/picker.js"></script>
+		<script src="https://localhost/masonry/vendor/datepicker/js/picker.date.js"></script>
+		<script src="https://localhost/masonry/vendor/datepicker/js/picker.time.js"></script>
+		<script src="https://localhost/masonry/vendor/datepicker/js/custom-picker.js"></script>
+		
+		<!-- Summernote JS -->
+		<script src="https://localhost/masonry/vendor/summernote/summernote-bs4.js"></script>
+
+		<script src="https://localhost/masonry/vendor/lobipanel/js/lobipanel.js"></script>
+		
+		<script src="https://localhost/masonry/vendor/bs-select/bs-select.min.js"></script>
+		
+		<script src="https://localhost/masonry/vendor/range-slider/ion.rangeSlider.min.js"></script>
+		
+		<script src="https://localhost/masonry/vendor/notify/notify.js"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
+		
+		<!-- Table 2 Excel JS -->
+		<script src="https://localhost/masonry/vendor/table2excel/jquery.table2excel.min.js"></script>
+		
+		<!-- Table 2 CSV JS -->
+		<script src="https://localhost/masonry/vendor/table2csv/jquery.table2csv.min.js"></script>
+		
+		<script src="https://localhost/masonry/js/main.js"></script>
+		
+		<!-- Signature pad JS -->
+		<script src="https://localhost/masonry/vendor/signature/js/jquery.signaturepad.js"></script>
+		<script type='text/javascript' src="https://github.com/niklasvh/html2canvas/releases/download/0.4.1/html2canvas.js"></script>
+
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuRuPvJP9uVsxkf2RukxYzKWNrU5xGSMM&libraries=places&callback=initAutocomplete" async defer></script>
+
+		<script src="https://localhost/masonry/js/custom.js"></script>
+<style type="text/css">
+	.pac-container{z-index: 1100;}
+</style>
+<script type='text/javascript'>
+	$(".preloader").delay(900).fadeOut(100).css({
+		"transform": "rotate(-35deg) scale(20)",
+		"opacity": "0"
+	});
+	
+	$(document).ready(function() {
+		$('.report_terms_conditions').summernote({
+			height: 170,
+			tabsize: 2
+		});
+	});
+</script type='text/javascript'>
+		
+	</body>
+</html>
